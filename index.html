@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>#見つけて尾道レトロキャンペーン!</title>
+    <meta name="description" content="" />
+    <!-- <link rel="shortcut icon" href="./favicon.ico" /> -->
+    <meta property="og:title" content="#見つけて尾道レトロキャンペーン!" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <!-- 案件では実際のURLを入れる -->
+    <meta property="og:url" content="https://example.com/" />
+    <!-- 案件では実際のURLを入れる -->
+    <meta property="og:image" content="https://example.com/ogp.png" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru:wght@400;500&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+
+    <!-- font-awesome -->
+    <!-- <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet" /> -->
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- jQuery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script> -->
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+    <!-- js -->
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <p class="header__logo">
+          <a href="/"><img src="images/img_logo.svg" alt="SnapOnomichi" width="210" height="27" /></a>
+        </p>
+        <nav class="header__nav">
+          <a href="" class="header__nav-link">キャンペーンについて</a>
+          <a href="" class="header__nav-link">特典</a>
+          <a href="" class="header__nav-link">おすすめスポット</a>
+          <a href="" class="header__nav-link">よくある質問</a>
+          <a href="" class="header__nav-link">参加要項</a>
+          <a href="#" class="header__nav-button button">応募してみる</a>
+        </nav>
+
+        <button type="button" id="js-drawer-icon" class="drawer-icon" aria-label="メニューを開閉する">
+          <span class="drawer-icon__bar">
+            <span class="drawer-icon__bar-dot"></span>
+          </span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- drawer -->
+    <div id="js-drawer-panel" class="drawer__panel">
+      <nav class="drawer__nav">
+        <ul class="drawer__nav-list">
+          <li class="drawer__nav-item"><a href="" class="drawer__link">キャンペーンについて</a></li>
+          <li class="drawer__nav-item"><a href="" class="drawer__link">特典</a></li>
+          <li class="drawer__nav-item"><a href="" class="drawer__link">おすすめスポット</a></li>
+          <li class="drawer__nav-item"><a href="" class="drawer__link">よくある質問</a></li>
+          <li class="drawer__nav-item"><a href="" class="drawer__link">参加要項</a></li>
+          <li class="drawer__nav-item"><a href="" class="drawer__button button">応募してみる</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <!-- fv -->
+      <div class="fv">
+        <div class="fv__inner inner">
+          <div class="fv__content">
+            <p class="fv__text">こんにちは</p>
+            <h1 class="fv__title">#見つけて尾道レトロキャンペーン!</h1>
+          </div>
+          <div class="fv__image">
+            <div class="fv__image-top">
+              <img src="./images/img_fukidashi.png" alt="" />
+              <img src="./images/img_present.png" alt="" />
+            </div>
+            <div class="fv__image-middle">
+              <picture class="fv__image-middle-img">
+                <source media="(min-width: 768px)" srcset="./images/fv-pc@2x.png" />
+                <img src="./images/fv-sp@2x.png" alt="" />
+              </picture>
+            </div>
+            <div class="fv__image-bottom">
+              <img src="./images/img_food.png" alt="" />
+              <img src="./images/fv-img_cats@2x.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end fv -->
+
+      <!-- concept -->
+      <!-- <section id="concept" class="concept section">
+        <div class="concept__inner inner">
+          <h2 class="concept__heading heading">Concept</h2>
+          <div class="concept__contents contents-top">
+            <div class="concept__image">
+              <img src="./images/concept-1@2x.png" alt="" />
+            </div>
+            <div class="concept__texts">
+              <h3 class="concept__text-main">可愛くてステキなのは当たり前。<br />地球にやさしくあるのも当たり前。</h3>
+              <p class="concept__text-sub">「sobolon」は、海洋汚染の要因であるマイクロプラスチックを回収し、それらを素材としたハンドメイドアクセサリーを製作しているブランドです。</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- end concept -->
+
+      <!-- feature -->
+      <!-- <section id="feature" class="feature section">
+        <div class="feature__inner inner">
+          <h2 class="feature__heading heading">Feature</h2>
+          <div class="feature__contents contents-top">
+            <div class="feature__item">
+              <div class="feature__image">
+                <img src="./images/feature-1@2x.png" alt="" />
+              </div>
+              <p class="feature__text">素材は海で採れた<br />マイクロプラスチック</p>
+            </div>
+            <div class="feature__item">
+              <div class="feature__image">
+                <img src="./images/feature-2@2x.png" alt="" />
+              </div>
+              <p class="feature__text">個性あふれる<br />“可愛い”デザイン</p>
+            </div>
+            <div class="feature__item">
+              <div class="feature__image">
+                <img src="./images/feature-3@2x.png" alt="" />
+              </div>
+              <p class="feature__text">世界にひとつだけの<br />一点物アクセサリー</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- end feature -->
+
+      <!-- question -->
+      <!-- <div class="question">
+        <div class="question__inner">
+          <p class="question__title">消費者である私たちが、<br />地球環境のためにできることは何か？</p>
+          <p class="question__text">
+            そんな視点からこのブランドは生まれました。<br />
+            オシャレを楽しむ気持ちを大切にしながらも、 ただ可愛いだけじゃない環境にやさしいアクセサリーを選ぶ人が増えていったら…<br />
+            その変化は少しずつ、だけども本質的に、<br />
+            この世界をHappyに変えていくのだと、私たちは考えます。
+          </p>
+        </div>
+      </div> -->
+      <!-- end question -->
+
+      <!-- products -->
+      <!-- <section id="products" class="products section">
+        <div class="products__inner">
+          <h2 class="products__heading heading">Products</h2>
+          <div class="products__items contents-top">
+            <div class="products__item">
+              <a href="" class="products__link">
+                <div class="products__image">
+                  <img src="./images/product-1@2x.png" alt="" />
+                </div>
+                <div class="products__texts">
+                  <h3 class="products__name">【しかくイヤリング】海洋マイクロプラスチックを使ったハンドメイドイヤリング(全7色)</h3>
+                  <p class="products__price">￥3,695</p>
+                </div>
+              </a>
+            </div>
+            <div class="products__item">
+              <a href="" class="products__link">
+                <div class="products__image">
+                  <img src="./images/product-2@2x.png" alt="" />
+                </div>
+                <div class="products__texts">
+                  <h3 class="products__name">【しかく指輪】海洋マイクロプラスチックを使ったハンドメイドアクセサリー/ゆびわ(全7色)</h3>
+                  <p class="products__price">￥2,390</p>
+                </div>
+              </a>
+            </div>
+            <div class="products__item">
+              <a href="" class="products__link">
+                <div class="products__image">
+                  <img src="./images/product-3@2x.png" alt="" />
+                </div>
+                <div class="products__texts">
+                  <h3 class="products__name">【ピンバッジ】海洋マイクロプラスチックを使ったsobolonオリジナルピンバッジ(全6色)</h3>
+                  <p class="products__price">￥2,580</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="products__button">
+            <a href="" class="button">MORE</a>
+          </div>
+        </div>
+      </section> -->
+      <!-- end products -->
+
+      <!-- news -->
+      <!-- <section id="news" class="news section">
+        <div class="news__inner inner">
+          <h2 class="news__heading heading">News</h2>
+          <div class="news__items contents-top">
+            <a href="" class="news__link">
+              <div class="news__item">
+                <div class="news__image">
+                  <img src="./images/news-1@2x.png" alt="" />
+                </div>
+                <div class="news__contents">
+                  <time datetime="2020-02-04" class="news__time">2020年2月4日</time>
+                  <h3 class="news__title">き業展終了！次回は2/11(火)フェスタ出店します。</h3>
+                  <p class="news__excerpt">「き業展」2日目！大盛況に終わりました\( ˆoˆ )/来てくださったみなさん本当にありがとうございました！やっぱり、地元多治見での出店はみ…</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="news__link">
+              <div class="news__item">
+                <div class="news__image">
+                  <img src="./images/news-2@2x.png" alt="" />
+                </div>
+                <div class="news__contents">
+                  <time datetime="2020-01-20" class="news__time">2020年1月20日</time>
+                  <h3 class="news__title">“可愛い” で 地球を守る！ 海洋マイクロプラスチックを使ったハンドメイドアクセサリー屋さん 【sobolon】</h3>
+                  <p class="news__excerpt">こんにちは！私は、「 “可愛い” で地球を守る！」をテーマに、昨今、環境問題として話題になっている、マイクロプラスチックを使ったアクセサリー…</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="news__link">
+              <div class="news__item">
+                <div class="news__image">
+                  <img src="./images/news-3@2x.png" alt="" />
+                </div>
+                <div class="news__contents">
+                  <time datetime="2020-02-04" class="news__time">2020年2月4日</time>
+                  <h3 class="news__title">sobolonの矛盾</h3>
+                  <p class="news__excerpt">こんにちは！“可愛い”で 地球を守る！マイクロプラスチックアクセサリー【 sobolon 】のリーダーひなこです！sobolonを知らない…</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news__button">
+            <a href="" class="button">MORE</a>
+          </div>
+        </div>
+      </section> -->
+      <!-- end news -->
+
+      <!-- motto -->
+      <!-- <section class="motto section">
+        <div class="motto__inner inner">
+          <div class="motto__image">
+            <img src="./images/concept-2@2x.png" alt="" />
+          </div>
+          <div class="motto__texts">
+            <h3 class="motto__title">合言葉は、<br />「 “可愛い” で 地球を守る！」</h3>
+            <p class="motto__text">深刻化している環境問題に対して、否定や制限、禁止といった強制的な方法ではなく、明るく幸せな未来を目指して、「可愛い」「楽しい」の力を信じて、愛につながる選択を世の中に増やしていきます。</p>
+          </div>
+        </div>
+      </section> -->
+      <!-- end motto -->
+
+      <!-- contact -->
+      <section id="contact" class="contact section">
+        <div class="contact__inner inner">
+          <h2 class="Contact__title heading">Contact</h2>
+
+          <div class="contact__box contents-top">
+            <p class="contact__attention"><span class="contact__attention-tag">＊</span>は入力必須項目です</p>
+            <form action="post" class="contact__form">
+              <div class="contact__fields">
+                <div class="contact__field">
+                  <!-- name -->
+                  <div class="form-field">
+                    <div class="form-field__head">
+                      <label for="your-name" class="form-field__label">お名前<span class="form-field__tag">＊</span></label>
+                    </div>
+                    <div class="form-field__item">
+                      <input type="text" name="your-name" id="your-name" class="form-text" />
+                    </div>
+                  </div>
+                  <!-- email -->
+                  <div class="form-field">
+                    <div class="form-field__head">
+                      <label for="your-email" class="form-field__label">メールアドレス<span class="form-field__tag">＊</span></label>
+                    </div>
+                    <div class="form-field__item">
+                      <input type="email" name="your-email" id="your-email" class="form-text" />
+                    </div>
+                  </div>
+                  <!-- company or individual -->
+                  <div class="form-field">
+                    <div class="form-field__head">
+                      <div class="form-field__label">法人/個人の選択<span class="form-field__tag">＊</span></div>
+                    </div>
+                    <div class="form-field__item">
+                      <div class="form-field__radios">
+                        <label class="form-radio">
+                          <input type="radio" name="your-class" class="form-radio__input" checked />
+                          <span class="form-radio__text">法人</span>
+                        </label>
+                        <label class="form-radio">
+                          <input type="radio" name="your-class" class="form-radio__input" />
+                          <span class="form-radio__text">個人</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- message -->
+                  <div class="form-field">
+                    <div class="form-field__head">
+                      <label for="your-message" class="form-field__label">お問い合わせ内容<span class="form-field__tag">＊</span></label>
+                    </div>
+                    <div class="form-field__item">
+                      <textarea name="your-message" id="your-message" class="form-textarea"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <!-- end contact__field -->
+
+                <!-- privacy -->
+                <div class="contact__privacy">
+                  <label class="form-checkbox">
+                    <input type="checkbox" name="form-checkbox" id="form-checkbox" class="form-checkbox__input" />
+                    <span class="form-checkbox__text"> <a href="" target="_blank">プライバシーポリシー</a>に同意します。 </span>
+                  </label>
+                </div>
+                <div class="contact__button">
+                  <input type="submit" value="送信" class="button" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- end contact -->
+    </main>
+    <!-- footer -->
+    <!-- <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer___logo"><img src="./images/logo@2x.png" alt="sobolon" /></p>
+        <ul class="footer__nav">
+          <li class="footer__nav-item"><a href="" class="footer__link">プライバシーポリシー</a></li>
+          <li class="footer__nav-item"><a href="" class="footer__link">特定商取引法に基づく表記</a></li>
+        </ul>
+        <ul class="footer__sns">
+          <li class="footer__sns-item">
+            <a href="" class="footer__sns-link"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li class="footer__sns-item">
+            <a href="" class="footer__sns-link"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li class="footer__sns-item">
+            <a href="" class="footer__sns-link"><i class="fa-brands fa-line"></i></a>
+          </li>
+        </ul>
+        <small class="footer__copyright">&copy; 2020 sobolon All rights reserved</small>
+      </div>
+    </footer> -->
+    <!-- end footer -->
+  </body>
+</html>

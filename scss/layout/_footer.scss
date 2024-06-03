@@ -1,0 +1,96 @@
+@use "../global" as *;
+
+/*!
+layout > footer
+------------------------------
+*/
+// .footer {
+// }
+
+// .footer__inner {
+//   padding-top: 40px;
+//   padding-bottom: 10px;
+//   text-align: center;
+
+//   @include mq(md) {
+//     padding-bottom: 14px;
+//   }
+// }
+
+// .footer___logo {
+//   width: 120px;
+//   margin-inline: auto;
+
+//   img {
+//     transition: opacity 0.3s;
+
+//     &:hover {
+//       opacity: 0.6;
+//     }
+//   }
+// }
+
+// .footer__nav {
+//   margin-top: 22px;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 12px;
+
+//   @include mq(md) {
+//     flex-direction: row;
+//     gap: 32px;
+//     justify-content: center;
+//   }
+// }
+
+// .footer__nav-item {
+// }
+
+// .footer__link {
+//   font-size: 12px;
+
+//   @include mq(md) {
+//     transition: opacity 0.3s;
+
+//     &:hover {
+//       opacity: 0.6;
+//     }
+//   }
+// }
+
+// .footer__sns {
+//   margin-top: 18px;
+//   display: flex;
+//   align-items: center;
+//   gap: 40px;
+//   justify-content: center;
+//   margin-bottom: 24px;
+
+//   @include mq(md) {
+//     margin-top: 20px;
+//     margin-bottom: 28px;
+//   }
+// }
+
+// .footer__sns-item {
+// }
+
+// .footer__sns-link {
+//   & i {
+//     color: var(--color-main);
+//     font-size: 18px;
+//   }
+
+//   @include mq(md) {
+//     transition: opacity 0.3s;
+
+//     &:hover {
+//       opacity: 0.6;
+//     }
+//   }
+// }
+
+// .footer__copyright {
+//   font-size: 12px;
+//   color: #888;
+// }

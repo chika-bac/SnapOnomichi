@@ -1,0 +1,42 @@
+@use "../global" as *;
+
+/*!
+component > heading
+------------------------------
+*/
+.heading {
+  // font-size: 30px;
+  // font-weight: 600;
+  // line-height: 1;
+  // position: relative;
+  // text-align: center;
+
+  // @include mq(md) {
+  //   font-size: 40px;
+  // }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: -28px;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: 60px;
+  //   height: 1px;
+  //   background: var(--color-main);
+
+  //   @include mq(md) {
+  //     bottom: -24px;
+  //   }
+  // }
+}
+
+.heading-h2 {
+  @include mq(md) {
+  }
+}
+
+.heading-h3 {
+  @include mq(md) {
+  }
+}

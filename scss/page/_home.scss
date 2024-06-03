@@ -1,0 +1,32 @@
+@use "../global" as *;
+
+// はみ出し検証用
+// * {
+//   outline: 2px solid blue;
+// }
+
+.annotation {
+  font-size: 10px;
+
+  @include mq(md) {
+    font-size: 14px;
+  }
+}
+
+// .hidden-sp {
+//   display: none;
+//   @include mq(md) {
+//     display: inline-block;
+//   }
+// }
+
+// .hidden-pc {
+//   @include mq(md) {
+//     display: none;
+//   }
+// }
+
+/*!
+mv
+------------------------------
+*/

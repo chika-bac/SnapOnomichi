@@ -1,0 +1,33 @@
+:root {
+  --font-family-base: "Noto Serif JP", serif;
+
+  // font(pc)
+  --font-size-pc: 16px;
+  --font-size-sp: 12px;
+  --line-height-base: 1.6;
+
+  // font family
+  --font-family-jp: "Noto Sans JP", sans-serif; // 400, 700
+  --font-family-kiwi: "Kiwi Maru", serif; // 400, 500
+  --font-family-en: "Courgette", cursive; // 400
+  --font-family-josefin: "Josefin Sans", sans-serif; // 400, 500
+
+  // color
+  // メインカラー
+  --color-main: #9ed0e0;
+  // サブカラー
+  --color-sub-dblue: #67b0c7;
+  --color-sub-gray: #cce1e4;
+  --color-sub-lblue: #e9f6f8;
+  // アクセントカラー
+  --color-red: #ce2073;
+  --color-yellow: #ffee56;
+  // モノクロ
+  --color-brown: #4a3636;
+  --color-dgray: #cccccc;
+  --color-gray: #f5f5f5;
+  --color-white: #ffffff;
+
+  // コンテンツ幅
+  --content-width: 1024px;
+}

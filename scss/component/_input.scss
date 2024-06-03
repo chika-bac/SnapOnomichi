@@ -1,0 +1,211 @@
+@use "../global" as *;
+
+/*!
+component > form-field
+------------------------------
+*/
+// .form-field {
+//   display: block;
+//   width: 100%;
+
+//   @include mq(md) {
+//     display: flex;
+//     gap: 10px;
+//   }
+// }
+
+// .form-field__head {
+//   padding: 4px 16px;
+//   font-weight: 600;
+//   background: var(--color-main);
+//   display: inline-block;
+//   opacity: 0.7;
+
+//   @include mq(md) {
+//     width: 180px;
+//     height: 40px;
+//     // 上下左右中央に配置
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+//   }
+// }
+
+// .form-field__label {
+//   font-size: 14px;
+//   display: flex;
+//   align-items: center;
+//   color: var(--color-base);
+//   white-space: nowrap;
+
+//   @include mq(md) {
+//     font-size: 18px;
+//   }
+// }
+
+// .form-field__tag {
+//   font-size: 10px;
+//   margin-left: 4px;
+//   color: #e7728e;
+
+//   @include mq(md) {
+//     font-size: 12px;
+//   }
+// }
+
+// .form-field__item {
+//   margin-top: 3px;
+
+//   @include mq(md) {
+//     // flexで並べた要素の残りの幅全てを確保
+//     flex-grow: 1;
+//     margin-top: 0;
+//   }
+// }
+
+// /*!
+// component > input > text/email
+// ------------------------------
+// */
+// .form-text {
+//   width: 100%;
+//   height: 40px;
+//   background: var(--color-base);
+//   box-shadow: 5px 6px 16px 0px rgba(96, 96, 96, 0.16);
+//   padding: 2px 6px;
+
+//   &:focus {
+//     outline: var(--color-main) auto 1px;
+//     box-shadow: 5px 6px 16px 0px rgba(var(--color-main) 0.16);
+//   }
+// }
+
+// /*!
+// component > input > radio
+// ------------------------------
+// */
+// .form-field__radios {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .form-radio {
+//   position: relative;
+// }
+
+// .form-radio__input {
+//   // ラジオボタンを非表示に
+//   width: 1px;
+//   height: 1px;
+//   position: absolute;
+//   clip: rect(0, 0, 0, 0);
+//   overflow: hidden;
+
+//   // .form-radio__inputがcheckedの時、その隣接セレクタ.form-radio__textの状態を指定
+//   &:checked + .form-radio__text {
+//     background: var(--color-main);
+//     color: var(--color-base);
+//   }
+
+//   &:focus + .form-radio__text {
+//     outline: var(--color-main) auto 1px;
+//     box-shadow: 5px 6px 16px 0px rgba(var(--color-main) 0.16);
+//   }
+// }
+
+// .form-radio__text {
+//   letter-spacing: 0.026px;
+//   color: var(--color-main);
+//   border: 1px solid var(--color-base);
+//   background: var(--color-base);
+//   width: 80px;
+//   height: 40px;
+//   display: grid;
+//   place-items: center;
+// }
+
+// /*!
+// component > input > textarea
+// ------------------------------
+// */
+// .form-textarea {
+//   width: 100%;
+//   height: 122px;
+//   background: var(--color-base);
+//   box-shadow: 5px 6px 16px 0px rgba(96, 96, 96, 0.16);
+//   padding: 2px 6px;
+
+//   &:focus {
+//     outline: var(--color-main) auto 1px;
+//     box-shadow: 5px 6px 16px 0px rgba(var(--color-main) 0.16);
+//   }
+// }
+
+// /*!
+// component > input > checkbox
+// ------------------------------
+// */
+// .form-checkbox {
+// }
+
+// .form-checkbox__input {
+//   // デフォルトcheckboxを非表示に
+//   height: 1px;
+//   width: 1px;
+//   position: absolute;
+//   clip: rect(0, 0, 0, 0);
+//   overflow: hidden;
+
+//   &:checked {
+//     + .form-checkbox__text {
+//       &::after {
+//         opacity: 1;
+//       }
+//     }
+//   }
+
+//   &:focus + .form-checkbox__text {
+//     // チェックボックスにフォーカスした際の外枠
+//     &:before {
+//       outline: var(--color-main) auto 1px;
+//       box-shadow: 5px 6px 16px 0px rgba(var(--color-main) 0.16);
+//     }
+//   }
+// }
+
+// .form-checkbox__text {
+//   position: relative;
+//   padding-left: calc(22px + 8px);
+
+//   // チェックボックス作成
+//   &::before,
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   }
+
+//   // チェックボックスの外枠
+//   &::before {
+//     border: 1px solid var(--color-main);
+//     width: 22px;
+//     height: 22px;
+//   }
+//   // チェックボックスの中のチェック
+//   &::after {
+//     width: 19.414px;
+//     height: 14.621px;
+//     left: 1px;
+//     background: url(../../images/check-icon.png) no-repeat center center / contain;
+//     opacity: 0;
+//   }
+
+//   & a {
+//     text-decoration-line: underline;
+//     color: var(--color-main);
+//   }
+// }

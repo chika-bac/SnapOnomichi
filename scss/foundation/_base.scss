@@ -1,0 +1,30 @@
+@use "../global" as *;
+
+/*!
+foundation > base
+------------------------------
+*/
+
+// スムーススクロール用（JSなし）
+html {
+  scroll-behavior: smooth;
+  // 移動先がヘッダーの後ろになるのを防止するためヘッダーの高さを考慮
+  // scroll-padding-top: 60px;
+
+  // @include mq(md) {
+  //   scroll-padding-top: 70px;
+  // }
+}
+
+body {
+  font-family: var(--font-family-jp);
+  font-size: var(--font-size-sp);
+  line-height: var(--line-height-base);
+  color: var(--color-brown);
+  background-color: var(--color-sub-lblue);
+  font-weight: 400;
+
+  @include mq(md) {
+    font-size: var(--font-size-pc);
+  }
+}

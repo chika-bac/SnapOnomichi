@@ -1,0 +1,24 @@
+@use "../global" as *;
+
+/*!
+layout > container
+------------------------------
+*/
+
+.section {
+  // padding-top: 95px;
+
+  @include mq(md) {
+    // padding-top: 160px;
+  }
+}
+
+.inner {
+  padding-inline: 20px;
+
+  @include mq(md) {
+    // padding-inline: 40px;
+    // max-width: calc(var(--content-width) + 40px * 2);
+    margin-inline: auto;
+  }
+}
