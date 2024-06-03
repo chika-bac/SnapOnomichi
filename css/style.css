@@ -217,6 +217,46 @@ body {
 component > button
 ------------------------------
 */
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: var(--color-brown);
+  font-weight: 700;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-brown);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-inline: auto;
+  border-radius: 40px;
+  border: 2px solid var(--color-brown);
+  -webkit-box-shadow: 0px 4px 0px 0px var(--color-brown);
+          box-shadow: 0px 4px 0px 0px var(--color-brown);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.button-lg {
+  padding: 8px 38px 10px 38px;
+  font-size: 16px;
+}
+
+.button-md {
+  padding: 4px 22px 6px 22px;
+  font-size: 16px;
+}
+
+.button-sm {
+  padding: 4px 22px 6px 22px;
+  font-size: 14px;
+}
+
 /*!
 component > heading
 ------------------------------
@@ -244,6 +284,11 @@ layout > header
 */
 .header {
   background-color: var(--color-white);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 64px;
 }
 
 .header__inner {
@@ -258,13 +303,52 @@ layout > header
           align-items: center;
   padding: 16px 20px;
 }
+@media screen and (min-width: 992px) {
+  .header__inner {
+    padding: 12px 24px;
+    margin-inline: auto;
+  }
+}
 
+.header__logo {
+  display: block;
+}
 .header__logo a img {
   width: 210px;
+}
+@media screen and (min-width: 992px) {
+  .header__logo a img {
+    width: 183px;
+  }
 }
 
 .header__nav {
   display: none;
+}
+@media screen and (min-width: 992px) {
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.header__nav-link {
+  font-size: 12px;
+}
+
+.header__nav-button {
+  margin-left: 16px;
 }
 
 .drawer-icon {
@@ -273,11 +357,29 @@ layout > header
   position: relative;
   z-index: 51;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .drawer-icon {
     display: none;
   }
 }
+.drawer-icon.is-checked .drawer-icon__bar:nth-of-type(1) {
+  width: 32px;
+  top: 12px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.drawer-icon.is-checked .drawer-icon__bar:nth-of-type(2) {
+  display: none;
+}
+.drawer-icon.is-checked .drawer-icon__bar:nth-of-type(3) {
+  top: 12px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+.drawer-icon.is-checked .drawer-icon__bar-dot {
+  display: none;
+}
+
 .drawer-icon__bar {
   position: absolute;
   top: 0;
@@ -286,15 +388,26 @@ layout > header
   height: 3px;
   background: var(--color-brown);
   border-radius: 3px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 .drawer-icon__bar:nth-of-type(1) {
-  top: 2px;
+  width: 25.6px;
 }
 .drawer-icon__bar:nth-of-type(2) {
-  top: 11px;
+  top: 12px;
 }
 .drawer-icon__bar:nth-of-type(3) {
-  top: 21px;
+  top: 25px;
+}
+
+.drawer-icon__bar-dot {
+  position: absolute;
+  left: 27.2px;
+  width: 4.8px;
+  height: 3px;
+  background: var(--color-brown);
+  border-radius: 3px;
 }
 
 .drawer__panel {
@@ -304,16 +417,16 @@ layout > header
   height: 100vh;
   padding-top: 82px;
   background: var(--color-white);
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.3s linear;
   transition: -webkit-transform 0.3s linear;
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 .drawer__panel.is-checked {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .drawer__nav-list {
@@ -334,6 +447,10 @@ layout > header
   text-align: center;
   font-size: 14px;
   color: var(--color-brown);
+}
+
+.drawer__button {
+  margin-top: -2px;
 }
 
 /*!
