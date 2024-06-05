@@ -26,24 +26,26 @@ document.querySelectorAll('#js-drawer-panel a[href^="#"]').forEach((link) => {
 /*
 Swiper: js
 ================================================ */
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  // direction: "vertical",
+const swiper = new Swiper(".about__swiper", {
   loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
+  // loopAdditionalSlides: 1,
+  speed: 4000,
+  autoplay: {
+    delay: 0,
+    // delay: 1000,
+    // disableOnInteraction: false,
   },
+  // slidPerView: 3,
+  slidesPerView: "auto",
+  spaceBetween: 10,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
+  // breakpoints: {
+  //   600: {
+  //     slidesPerView: 2
+  //   },
+  //   960: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 32
+  //   }
+  // }
 });
