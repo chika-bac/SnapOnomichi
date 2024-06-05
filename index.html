@@ -23,15 +23,13 @@
     <!-- <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet" /> -->
 
     <!-- swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css" />
-
     <!-- jQuery -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script> -->
     <!-- swiper -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <!-- js -->
     <script src="./js/main.js" defer></script>
   </head>
@@ -39,7 +37,7 @@
     <header class="header">
       <div class="header__inner">
         <p class="header__logo">
-          <a href="/"><img src="images/img_logo.svg" alt="SnapOnomichi" width="210" height="27" /></a>
+          <a href="/"><img src="images/logo.svg" alt="SnapOnomichi" width="210" height="27" /></a>
         </p>
         <nav class="header__nav">
           <ul class="header__list">
@@ -81,20 +79,20 @@
     <main>
       <!-- fv -->
       <div class="fv">
-        <div class="fv__inner inner">
+        <div class="fv__inner">
           <div class="fv__content">
             <p class="fv__text">あなたの見つけたレトロな尾道の一枚を<br />Instagramに投稿しよう</p>
             <h1 class="fv__title">
               <picture>
-                <source media="(min-width: 768px)" srcset="./images/img_title-pc@2x.png" />
-                <img src="./images/img_title-sp@2x.png" alt="#見つけて尾道レトロキャンペーン!" width="520" height="158" />
+                <source media="(min-width: 768px)" srcset="./images/fv-img_title-pc@2x.png" />
+                <img src="./images/fv-img_title-sp@2x.png" alt="#見つけて尾道レトロキャンペーン!" width="520" height="158" />
               </picture>
             </h1>
           </div>
           <div class="fv__image">
             <div class="fv__image-top">
-              <img src="./images/img_fukidashi.png" class="fv__image-top-fukidashi" alt="" />
-              <img src="./images/img_present.png" class="fv__image-top-present" alt="" />
+              <img src="./images/fv-img_fukidashi.png" class="fv__image-top-fukidashi" alt="" />
+              <img src="./images/fv-img_present.png" class="fv__image-top-present" alt="" />
             </div>
             <div class="fv__image-middle">
               <picture class="fv__image-middle-img">
@@ -103,13 +101,92 @@
               </picture>
             </div>
             <div class="fv__image-bottom">
-              <img src="./images/img_food.png" class="fv__image-bottom-food" alt="" />
-              <img src="./images/fv-img_cats@2x.png" class="fv__image-bottom-cats" alt="" />
+              <img src="./images/fv-img_food.png" class="fv__image-bottom-food" alt="" />
+              <!-- <img src="./images/fv-img_cats@2x.png" class="fv__image-bottom-cats" alt="" /> -->
+              <picture class="fv__image-bottom-cats">
+                <!-- pc -->
+                <source media="(min-width: 768px)" srcset="./images/fv-img_cats-pc@2x.png" />
+                <!-- sp -->
+                <img src="./images/fv-img_cats@2x.png" alt="" />
+              </picture>
             </div>
           </div>
         </div>
       </div>
       <!-- end fv -->
+
+      <!-- about -->
+      <section class="about">
+        <div class="about__inner inner">
+          <div class="about__top">
+            <p class="about__icon"><img src="./images/icon-about.svg" alt="" /></p>
+            <h2 class="about__heading heading">
+              <span class="about__heading-en heading-en">About</span>
+              <span class="about__heading-ja heading-ja">キャンペーンについて</span>
+            </h2>
+          </div>
+          <div class="about__content">
+            <h3 class="about__content-title">あなたの心が動いた尾道の瞬間を<br />＼ おしえてください！ ／</h3>
+            <p class="about__content-text">風情あふれる坂道に、静かに佇むお寺。 路地裏の角をまがれば 気ままにお昼寝する猫に出会え、 ふと振り返れば、美しい瀬戸内の海が。</p>
+            <p class="about__content-text">数々の映画の舞台にもなってきたこの街には 心がほどけるような、 レトロでやさしい風景が広がっています。</p>
+            <p class="about__content-text">あなたの見つけた尾道のなつかしい景色を、 ぜひおしえてください。</p>
+            <p class="about__content-text">尾道観光部（@onomichi_retro）を フォロー&尾道で撮影した写真を、 ハッシュタグ「#見つけて尾道レトロ」を つけてInstagramに投稿いただいた方の中から</p>
+            <p class="about__content-message">尾道のギフトを100名様にプレゼント！</p>
+            <div class="about__button">
+              <a href="" class="button">参加の仕方はこちら</a>
+            </div>
+          </div>
+        </div>
+        <div class="about__bg">
+          <div class="about__bg-top">
+            <img src="./images/about-img_bg_pawpads.svg" alt="" />
+          </div>
+          <div class="about__bg-middle">
+            <img src="./images/about-photo_left@2x.png" class="about__bg-left" alt="" />
+            <img src="./images/about-photo_right@2x.png" class="about__bg-right" alt="" />
+          </div>
+          <div class="about__bg-bottom">
+            <img src="./images/about-arrow.svg" class="about__bg-arrow" alt="" />
+            <img src="./images/about-slope@2x.png" class="about__bg-slope" alt="" />
+            <img src="./images/about-goods-buton.png" class="about__bg-button" alt="" />
+            <img src="./images/about-goods-cloth.png" class="about__bg-cloth" alt="" />
+          </div>
+        </div>
+
+        <div class="about__slider">
+          <p class="about__onomichi">
+            <img src="./images/about-img_onomichi@2x.png" alt="" />
+          </p>
+
+          <!-- Slider main container -->
+          <div class="swiper about__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="./images/about-scroll1@2x.png" alt="" /></div>
+              <div class="swiper-slide"><img src="./images/about-scroll2@2x.png" alt="" /></div>
+              <div class="swiper-slide"><img src="./images/about-scroll3@2x.png" alt="" /></div>
+              <div class="swiper-slide"><img src="./images/about-scroll4@2x.png" alt="" /></div>
+              <div class="swiper-slide"><img src="./images/about-scroll5@2x.png" alt="" /></div>
+              <div class="swiper-slide"><img src="./images/about-scroll6@2x.png" alt="" /></div>
+              <div class="swiper-slide"><img src="./images/about-scroll7@2x.png" alt="" /></div>
+              <div class="swiper-slide"><img src="./images/about-scroll8@2x.png" alt="" /></div>
+              <div class="swiper-slide"><img src="./images/about-scroll9@2x.png" alt="" /></div>
+              <div class="swiper-slide"><img src="./images/about-scroll10@2x.png" alt="" /></div>
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
+      </section>
+      <!-- end about -->
 
       <!-- concept -->
       <!-- <section id="concept" class="concept section">

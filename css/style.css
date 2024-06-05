@@ -572,14 +572,14 @@ fv
 
 .fv__image-bottom-food {
   position: absolute;
-  top: 391px;
-  left: 0;
-  width: 86px;
+  top: 396px;
+  left: 2px;
+  width: 87px;
 }
 @media screen and (min-width: 900px) {
   .fv__image-bottom-food {
-    top: 227px;
-    left: 0;
+    top: 240px;
+    left: 2px;
     width: 202px;
   }
 }
