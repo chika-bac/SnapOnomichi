@@ -8,23 +8,23 @@
 .annotation {
   font-size: 10px;
 
-  @include mq(md) {
+  @include mq(lg) {
     font-size: 14px;
   }
 }
 
-// .hidden-sp {
-//   display: none;
-//   @include mq(lg) {
-//     display: inline-block;
-//   }
-// }
+.hidden-sp {
+  display: none;
+  @include mq(lg) {
+    display: inline-block;
+  }
+}
 
-// .hidden-pc {
-//   @include mq(lg) {
-//     display: none;
-//   }
-// }
+.hidden-pc {
+  @include mq(lg) {
+    display: none;
+  }
+}
 
 /*!
 fv
@@ -167,6 +167,11 @@ about
   // about__bg用
   position: relative;
   overflow: hidden;
+
+  @include mq(lg) {
+    margin-top: 97px;
+    padding-top: 80px;
+  }
 }
 
 .about__inner {
@@ -178,6 +183,15 @@ about
   position: relative;
   // about__bg用
   z-index: 1;
+
+  @include mq(lg) {
+    padding-top: 40px;
+    border-radius: 40px;
+    padding-bottom: 40px;
+    max-width: calc(620px + 114px * 2);
+    margin-inline: auto;
+    padding-inline: 0;
+  }
 }
 
 .about__img {
@@ -190,6 +204,13 @@ about
   transform: rotate(-8deg);
   top: 32px;
   left: 33px;
+
+  @include mq(lg) {
+    width: 134px;
+    height: 100px;
+    top: 40px;
+    left: 85px;
+  }
 }
 
 .about__top-right {
@@ -199,6 +220,13 @@ about
   transform: rotate(8deg);
   top: 30px;
   right: 20px;
+
+  @include mq(lg) {
+    width: 134px;
+    height: 100px;
+    top: 47px;
+    right: 84px;
+  }
 }
 
 // heading共通化？
@@ -209,6 +237,11 @@ about
   gap: 6px;
   margin-bottom: calc(12px + 24px);
 
+  @include mq(lg) {
+    gap: 8px;
+    margin-bottom: calc(16px + 32px);
+  }
+
   & span {
     display: block;
   }
@@ -217,6 +250,10 @@ about
 .about__icon {
   img {
     width: 37.333px;
+
+    @include mq(lg) {
+      width: 48px;
+    }
   }
 }
 
@@ -228,6 +265,10 @@ about
   font-size: 16px;
   // font-weight: 400;
   line-height: 1.25;
+
+  @include mq(lg) {
+    font-size: 20px;
+  }
 }
 
 .about__heading-ja {
@@ -240,6 +281,10 @@ about
   line-height: 1.25;
   position: relative;
 
+  @include mq(lg) {
+    font-size: 32px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -249,6 +294,12 @@ about
     width: 200px;
     height: 6px;
     background: var(--color-yellow);
+
+    @include mq(lg) {
+      width: 320px;
+      height: 8px;
+      bottom: -16px;
+    }
   }
 }
 
@@ -258,18 +309,34 @@ about
   align-items: center;
   gap: 24px;
   text-align: center;
+
+  @include mq(lg) {
+    gap: 32px;
+  }
 }
 
 .about__content-title {
   font-size: 14px;
   font-weight: 700;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
 }
 
 .about__content-text {
   font-size: 12px;
 
+  @include mq(lg) {
+    font-size: 16px;
+  }
+
   & + & {
     margin-top: calc(12px * 1.6);
+
+    @include mq(lg) {
+      margin-top: calc(16px * 1.6);
+    }
   }
 }
 
@@ -278,6 +345,12 @@ about
   padding-bottom: 8px;
   font-size: 14px;
   font-weight: 700;
+
+  @include mq(lg) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 20px;
+  }
 }
 
 .about__button {
@@ -289,20 +362,36 @@ about
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
+
+  @include mq(lg) {
+    bottom: -50px;
+    width: 140px;
+  }
 }
 .about__bg {
   z-index: 0;
 }
 
-.about__bg-top {
-  // z-index: 0;
+.about__bg-pawpads {
   position: absolute;
   top: 22px;
   right: 0;
   width: 54px;
+
+  @include mq(lg) {
+    top: 40px;
+    left: calc(50% + 424px + 66px);
+    width: 100px;
+  }
 }
 
-.about__bg-middle {
+.about__bg-pattern {
+  @include mq(lg) {
+    position: absolute;
+    width: 250px;
+    top: 60px;
+    left: calc(50% - 848px - 103px);
+  }
 }
 
 .about__bg-left {
@@ -312,6 +401,18 @@ about
   width: 200px;
   height: 200px;
   border-radius: 24px;
+
+  @include mq(md) {
+    // あとで調整する
+  }
+
+  @include mq(lg) {
+    width: 480px;
+    height: 480px;
+    top: 154px;
+    left: calc(50% - 848px - 190px);
+    border-radius: 40px;
+  }
 }
 
 .about__bg-right {
@@ -321,17 +422,44 @@ about
   width: 200px;
   height: 200px;
   border-radius: 24px;
-}
 
-.about__bg-bottom {
+  @include mq(md) {
+  }
+
+  @include mq(lg) {
+    width: 480px;
+    height: 480px;
+    top: 153px;
+    right: calc(50% - 848px - 136px);
+    border-radius: 40px;
+  }
 }
 
 .about__bg-slope {
   position: absolute;
-  // bottom: 94px;
   top: 741px;
   left: 0;
   width: 138px;
+
+  @include mq(md) {
+  }
+
+  @include mq(lg) {
+    width: 427px;
+    height: 817px;
+    top: 450px;
+    left: calc(50% - 848px - 8px);
+  }
+}
+
+.about__bg-wave {
+  @include mq(lg) {
+    position: absolute;
+    width: 874px;
+    height: 45px;
+    top: 687px;
+    left: calc(50% + 424px + 24px);
+  }
 }
 
 .about__bg-button {
@@ -339,6 +467,15 @@ about
   top: 752px;
   right: 21px;
   width: 48px;
+
+  @include mq(md) {
+  }
+
+  @include mq(lg) {
+    width: 101px;
+    top: 681px;
+    left: calc(50% + 424px + 81px);
+  }
 }
 
 .about__bg-cloth {
@@ -346,6 +483,16 @@ about
   top: 794px;
   right: 57px;
   width: 133px;
+
+  @include mq(md) {
+  }
+
+  @include mq(lg) {
+    width: 308px;
+    top: 837px;
+    left: calc(50% + 424px - 50px);
+    z-index: 1;
+  }
 }
 
 /*!
@@ -356,11 +503,20 @@ slider
   margin-top: 140px;
   margin-bottom: 33px;
   position: relative;
+
+  @include mq(lg) {
+    margin-top: 167px;
+    margin-bottom: 0;
+  }
 }
 
 .about__onomichi {
   width: 335px;
-  text-align: center;
+  margin-inline: auto;
+
+  @include mq(lg) {
+    width: 891px;
+  }
 }
 
 .swiper {
@@ -378,5 +534,10 @@ slider
 
 .about__swiper-item {
   width: 100px !important;
-  height: 100px;
+  height: 100px !important;
+
+  @include mq(lg) {
+    width: 200px !important;
+    height: 200px !important;
+  }
 }

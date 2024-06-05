@@ -128,7 +128,8 @@
             <span class="about__heading-ja heading-ja">キャンペーンについて</span>
           </h2>
           <div class="about__content">
-            <h3 class="about__content-title">あなたの心が動いた尾道の瞬間を<br />＼ おしえてください！ ／</h3>
+            <h3 class="about__content-title hidden-pc">あなたの心が動いた尾道の瞬間を<br />＼ おしえてください！ ／</h3>
+            <h3 class="about__content-title hidden-sp">＼あなたの心が動いた尾道の瞬間を、おしえてください！／</h3>
             <div class="about__text">
               <p class="about__content-text">風情あふれる坂道に、静かに佇むお寺。<br />路地裏の角をまがれば<br />気ままにお昼寝する猫に出会え、<br />ふと振り返れば、美しい瀬戸内の海が。</p>
               <p class="about__content-text">数々の映画の舞台にもなってきたこの街には<br />心がほどけるような、<br />レトロでやさしい風景が広がっています。</p>
@@ -143,18 +144,26 @@
           <img src="./images/about-arrow.svg" class="about__bg-arrow" alt="" />
         </div>
         <div class="about__bg">
-          <div class="about__bg-top">
-            <img src="./images/about-img_bg_pawpads.svg" alt="" />
-          </div>
-          <div class="about__bg-middle">
-            <img src="./images/about-photo_left@2x.png" class="about__bg-left" alt="" />
-            <img src="./images/about-photo_right@2x.png" class="about__bg-right" alt="" />
-          </div>
-          <div class="about__bg-bottom">
-            <img src="./images/about-slope@2x.png" class="about__bg-slope" alt="" />
-            <img src="./images/about-goods-buton.png" class="about__bg-button" alt="" />
-            <img src="./images/about-goods-cloth.png" class="about__bg-cloth" alt="" />
-          </div>
+          <img src="./images/about-img_bg_pawpads.svg" class="about__bg-pawpads" alt="" />
+          <img src="./images/about-pattern@2x.png" class="about__bg-pattern hidden-sp" alt="" />
+          <picture class="about__bg-slope">
+            <source media="(min-width: 768px)" srcset="./images/about-slope-pc@2x.png" />
+            <img src="./images/about-slope-sp@2x.png" alt="" />
+          </picture>
+          <img src="./images/about-bg-wave.svg" class="about__bg-wave hidden-sp" alt="" />
+          <img src="./images/about-goods-buton.png" class="about__bg-button" alt="" />
+          <img src="./images/about-goods-cloth.png" class="about__bg-cloth" alt="" />
+          <picture class="about__bg-left">
+            <source media="(min-width: 768px)" srcset="./images/about-photo_left-pc@2x.png" />
+
+            <img src="./images/about-photo_left-sp@2x.png" alt="" />
+          </picture>
+          <picture class="about__bg-right">
+            <source media="(min-width: 768px)" srcset="./images/about-photo_right-pc@2x.png" />
+            <img src="./images/about-photo_right-sp@2x.png" alt="" />
+          </picture>
+
+          <!-- </div> -->
         </div>
 
         <div class="about__slider">

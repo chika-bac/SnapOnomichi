@@ -28,24 +28,16 @@ Swiper: js
 ================================================ */
 const swiper = new Swiper(".about__swiper", {
   loop: true,
-  // loopAdditionalSlides: 1,
   speed: 4000,
   autoplay: {
     delay: 0,
-    // delay: 1000,
-    // disableOnInteraction: false,
   },
-  // slidPerView: 3,
   slidesPerView: "auto",
   spaceBetween: 10,
 
-  // breakpoints: {
-  //   600: {
-  //     slidesPerView: 2
-  //   },
-  //   960: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 32
-  //   }
-  // }
+  breakpoints: {
+    960: {
+      spaceBetween: 20,
+    },
+  },
 });
