@@ -646,14 +646,14 @@ about
 @media screen and (min-width: 500px) {
   .about__inner {
     padding-top: 40px;
-    border-radius: 40px;
     padding-bottom: 40px;
-    max-width: calc(100% - 80px);
+    border-radius: 40px;
+    max-width: calc(100% - 100px);
     margin-inline: auto;
     padding-inline: 0;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .about__inner {
     max-width: 848px;
   }
@@ -672,11 +672,11 @@ about
   .about__top-left {
     width: 134px;
     height: 100px;
-    top: 40px;
-    left: 85px;
+    top: 17px;
+    left: 14px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .about__top-left {
     width: 134px;
     height: 100px;
@@ -698,11 +698,11 @@ about
   .about__top-right {
     width: 134px;
     height: 100px;
-    top: 47px;
-    right: 84px;
+    top: 13px;
+    right: 29px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .about__top-right {
     width: 134px;
     height: 100px;
@@ -872,7 +872,7 @@ about
   right: 0;
   width: 54px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .about__bg-pawpads {
     top: 40px;
     left: calc(50% + 424px + 66px);
@@ -902,8 +902,13 @@ about
     width: 480px;
     height: 480px;
     top: 154px;
-    left: calc(50% - 848px - 190px);
+    left: calc(50% - 848px);
     border-radius: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__bg-left {
+    left: calc(50% - 848px - 190px);
   }
 }
 
@@ -920,8 +925,13 @@ about
     width: 480px;
     height: 480px;
     top: 153px;
-    right: calc(50% - 848px - 136px);
+    right: calc(50% - 848px);
     border-radius: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__bg-right {
+    right: calc(50% - 848px - 136px);
   }
 }
 
@@ -932,6 +942,12 @@ about
   width: 138px;
 }
 @media screen and (min-width: 900px) {
+  .about__bg-slope {
+    width: 427px;
+    height: 817px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .about__bg-slope {
     width: 427px;
     height: 817px;
@@ -956,9 +972,23 @@ about
   right: 21px;
   width: 48px;
 }
+@media screen and (min-width: 768px) {
+  .about__bg-button {
+    top: 726px;
+    left: calc(50% + 306px);
+    z-index: 1;
+  }
+}
 @media screen and (min-width: 900px) {
   .about__bg-button {
     width: 101px;
+    top: 945px;
+    left: calc(50% + 336px);
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__bg-button {
     top: 681px;
     left: calc(50% + 424px + 81px);
   }
@@ -971,6 +1001,14 @@ about
   width: 133px;
 }
 @media screen and (min-width: 900px) {
+  .about__bg-cloth {
+    width: 258px;
+    top: 997px;
+    left: calc(50% + 112px);
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
   .about__bg-cloth {
     width: 308px;
     top: 837px;
