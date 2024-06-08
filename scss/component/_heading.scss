@@ -5,38 +5,67 @@ component > heading
 ------------------------------
 */
 .heading {
-  // font-size: 30px;
-  // font-weight: 600;
-  // line-height: 1;
-  // position: relative;
-  // text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: calc(12px + 24px);
 
-  // @include mq(md) {
-  //   font-size: 40px;
-  // }
+  @include mq(lg) {
+    gap: 8px;
+    margin-bottom: calc(16px + 32px);
+  }
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: -28px;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   width: 60px;
-  //   height: 1px;
-  //   background: var(--color-main);
-
-  //   @include mq(md) {
-  //     bottom: -24px;
-  //   }
-  // }
-}
-
-.heading-h2 {
-  @include mq(md) {
+  & span {
+    display: block;
   }
 }
 
-.heading-h3 {
-  @include mq(md) {
+.heading-icon {
+  img {
+    width: 37.333px;
+
+    @include mq(lg) {
+      width: 48px;
+    }
+  }
+}
+
+.heading-en {
+  font-family: var(--font-family-en);
+  font-size: 16px;
+  line-height: 1.25;
+
+  @include mq(lg) {
+    font-size: 20px;
+  }
+}
+
+.heading-ja {
+  font-family: var(--font-family-kiwi);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  position: relative;
+
+  @include mq(lg) {
+    font-size: 32px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    // width: 200px; // 文字数に合わせて後で調整
+    height: 6px;
+    background: var(--color-yellow);
+
+    @include mq(lg) {
+      // width: 320px;
+      height: 8px;
+      bottom: -16px;
+    }
   }
 }
