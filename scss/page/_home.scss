@@ -538,12 +538,21 @@ Step how to enter
   padding-bottom: 38px;
   position: relative;
   overflow: hidden;
+
+  @include mq(lg) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .step__inner {
   margin-inline: 20px;
   position: relative;
   z-index: 1;
+
+  @include mq(lg) {
+    margin-inline: 36px;
+  }
 }
 
 .step__heading {
@@ -560,20 +569,42 @@ Step how to enter
     width: 100px;
 
     @include mq(lg) {
-      // width: 320px;
+      width: 160px;
     }
   }
 }
 
 .step__content {
   margin-top: 32px;
+
+  @include mq(lg) {
+    margin-top: 40px;
+  }
 }
 
 .step__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(lg) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+  }
 }
 
 .step__item {
   text-align: center;
+
+  @include mq(lg) {
+    position: relative;
+
+    &:nth-child(2) {
+      padding-top: 69px;
+    }
+  }
 }
 
 .step__img {
@@ -584,6 +615,11 @@ Step how to enter
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @include mq(lg) {
+    width: 280px;
+    height: 300px;
+  }
 
   &.step1 {
     background-image: url(../images/step-bg-1@2x.png);
@@ -603,12 +639,20 @@ Step how to enter
   font-family: var(--font-family-josefin);
   color: var(--color-white);
   text-transform: uppercase;
+
+  @include mq(lg) {
+    padding-top: 44px;
+  }
 }
 
 .step__number-top {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.25;
+
+  @include mq(lg) {
+    font-size: 20px;
+  }
 }
 
 .step__number-bottom {
@@ -616,11 +660,20 @@ Step how to enter
   font-style: italic;
   font-weight: 600;
   line-height: 0.9;
+
+  @include mq(lg) {
+    font-size: 56px;
+  }
 }
 
 .step__item-img {
   width: 112px;
   height: 112px;
+
+  @include mq(lg) {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .step__text {
@@ -628,17 +681,22 @@ Step how to enter
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @include mq(lg) {
+    margin-top: 24px;
+  }
 }
 
 .step__text-title {
   font-size: 16px;
   font-weight: 700;
+
+  @include mq(lg) {
+    font-size: 20px;
+  }
 }
 
 .step__text-content {
-}
-
-.link__border {
 }
 
 .step__text-link {
@@ -651,10 +709,20 @@ Step how to enter
   margin-inline: auto;
   font-size: 14px;
   font-weight: 700;
+  align-items: center;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
 
   & img {
     width: 20px;
     height: 20px;
+
+    @include mq(lg) {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
@@ -664,10 +732,24 @@ Step how to enter
   height: 34px;
   display: block;
   margin-inline: auto;
+
+  @include mq(lg) {
+    width: 113px;
+    height: 24px;
+    position: absolute;
+    margin-top: 0;
+    top: 204px;
+    right: -48px;
+  }
 }
 
 .step__button {
   margin-top: 16px;
+  text-align: center;
+
+  @include mq(lg) {
+    margin-top: 40px;
+  }
 }
 
 .step__bg {
