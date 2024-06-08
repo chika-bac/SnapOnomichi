@@ -26,6 +26,13 @@
   }
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
+.link__border {
+  text-decoration: underline;
+}
 /*!
 fv
 ------------------------------
@@ -61,7 +68,6 @@ fv
   font-family: var(--font-family-kiwi);
   font-size: 14px;
   line-height: 1.25;
-  // font-weight: 400;
 
   @include mq(lg) {
     margin-bottom: 24px;
@@ -188,21 +194,13 @@ about
     padding-top: 40px;
     padding-bottom: 40px;
     border-radius: 40px;
-    // max-width: calc(620px + 114px * 2);
     max-width: calc(100% - 50px * 2);
-    // max-width: calc(311px + 12px * 2);
     margin-inline: auto;
     padding-inline: 0;
   }
 
   @include mq(xl) {
     max-width: calc(620px + 114px * 2);
-    // padding-top: 40px;
-    // border-radius: 40px;
-    // padding-bottom: 40px;
-    // max-width: calc(620px + 114px * 2);
-    // margin-inline: auto;
-    // padding-inline: 0;
   }
 }
 
@@ -211,22 +209,22 @@ about
 
 .about__top-left {
   position: absolute;
-  width: 80px;
-  height: 60px;
-  transform: rotate(-8deg);
+  width: 88px;
+  height: 68px;
   top: 32px;
   left: 33px;
 
   @include mq(sm) {
     width: 134px;
     height: 100px;
+
     top: 17px;
     left: 14px;
   }
 
   @include mq(lg) {
-    width: 134px;
-    height: 100px;
+    width: 148px;
+    height: 116px;
     top: 40px;
     left: 85px;
   }
@@ -234,22 +232,23 @@ about
 
 .about__top-right {
   position: absolute;
-  width: 80px;
-  height: 60px;
-  transform: rotate(8deg);
+  width: 88px;
+  height: 68px;
   top: 30px;
   right: 20px;
 
   @include mq(sm) {
     width: 134px;
     height: 100px;
+
     top: 13px;
     right: 29px;
   }
 
   @include mq(lg) {
-    width: 134px;
-    height: 100px;
+    width: 148px;
+    height: 116px;
+
     top: 47px;
     right: 84px;
   }
@@ -372,8 +371,8 @@ about
   font-weight: 700;
 
   @include mq(lg) {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     font-size: 20px;
   }
 }
@@ -404,7 +403,7 @@ about
   width: 54px;
 
   @include mq(xl) {
-    top: 40px;
+    top: 0;
     left: calc(50% + 424px + 66px);
     width: 100px;
   }
@@ -415,7 +414,7 @@ about
     position: absolute;
     width: 250px;
     top: 60px;
-    left: calc(50% - 848px - 103px);
+    left: calc(50% - 775px);
   }
 }
 
@@ -434,17 +433,12 @@ about
     width: 480px;
     height: 480px;
     top: 154px;
-    // left: calc(50% - 848px - 190px);
     left: calc(50% - 848px);
     border-radius: 40px;
   }
 
   @include mq(xl) {
-    // width: 480px;
-    // height: 480px;
-    // top: 154px;
-    left: calc(50% - 848px - 190px);
-    // border-radius: 40px;
+    left: calc(50% - 848px - 208px);
   }
 }
 
@@ -465,11 +459,7 @@ about
   }
 
   @include mq(xl) {
-    // width: 480px;
-    // height: 480px;
-    // top: 153px;
-    right: calc(50% - 848px - 136px);
-    // border-radius: 40px;
+    right: calc(50% - 848px - 192px);
   }
 }
 
@@ -487,7 +477,7 @@ about
   @include mq(xl) {
     width: 427px;
     height: 817px;
-    top: 450px;
+    top: 400px;
     left: calc(50% - 848px - 8px);
   }
 }
@@ -509,7 +499,6 @@ about
   width: 48px;
 
   @include mq(md) {
-    // width: 101px;
     top: 726px;
     left: calc(50% + 306px);
     z-index: 1;
@@ -578,6 +567,9 @@ slider
 }
 
 .about__swiper {
+  @include mq(xl) {
+    margin-top: -8px;
+  }
 }
 
 .about__swiper-wrapper {
