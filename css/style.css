@@ -810,6 +810,8 @@ about
           align-items: center;
   gap: 24px;
   text-align: center;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
 }
 @media screen and (min-width: 900px) {
   .about__content {
@@ -1173,6 +1175,12 @@ Step how to enter
 }
 @media screen and (min-width: 900px) {
   .step__img {
+    width: 260px;
+    height: 278px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__img {
     width: 280px;
     height: 300px;
   }
@@ -1213,6 +1221,11 @@ Step how to enter
 }
 @media screen and (min-width: 900px) {
   .step__number-top {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__number-top {
     font-size: 20px;
   }
 }
@@ -1225,6 +1238,11 @@ Step how to enter
 }
 @media screen and (min-width: 900px) {
   .step__number-bottom {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__number-bottom {
     font-size: 56px;
   }
 }
@@ -1234,6 +1252,12 @@ Step how to enter
   height: 112px;
 }
 @media screen and (min-width: 900px) {
+  .step__item-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .step__item-img {
     width: 160px;
     height: 160px;
@@ -1253,6 +1277,11 @@ Step how to enter
 }
 @media screen and (min-width: 900px) {
   .step__text {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__text {
     margin-top: 24px;
   }
 }
@@ -1263,7 +1292,27 @@ Step how to enter
 }
 @media screen and (min-width: 900px) {
   .step__text-title {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__text-title {
     font-size: 20px;
+  }
+}
+
+.step__text-content {
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+}
+@media screen and (min-width: 768px) {
+  .step__text-content {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__text-content {
+    font-size: 16px;
   }
 }
 
@@ -1285,7 +1334,7 @@ Step how to enter
   font-weight: 700;
   align-items: center;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .step__text-link {
     font-size: 16px;
   }

@@ -273,6 +273,7 @@ about
   align-items: center;
   gap: 24px;
   text-align: center;
+  font-feature-settings: "palt";
 
   @include mq(lg) {
     gap: 32px;
@@ -617,6 +618,10 @@ Step how to enter
   background-position: center;
 
   @include mq(lg) {
+    width: 260px;
+    height: 278px;
+  }
+  @include mq(xl) {
     width: 280px;
     height: 300px;
   }
@@ -651,6 +656,9 @@ Step how to enter
   line-height: 1.25;
 
   @include mq(lg) {
+    font-size: 18px;
+  }
+  @include mq(xl) {
     font-size: 20px;
   }
 }
@@ -662,6 +670,9 @@ Step how to enter
   line-height: 0.9;
 
   @include mq(lg) {
+    font-size: 50px;
+  }
+  @include mq(xl) {
     font-size: 56px;
   }
 }
@@ -671,6 +682,10 @@ Step how to enter
   height: 112px;
 
   @include mq(lg) {
+    width: 140px;
+    height: 140px;
+  }
+  @include mq(xl) {
     width: 160px;
     height: 160px;
   }
@@ -683,6 +698,9 @@ Step how to enter
   gap: 16px;
 
   @include mq(lg) {
+    margin-top: 20px;
+  }
+  @include mq(xl) {
     margin-top: 24px;
   }
 }
@@ -692,11 +710,21 @@ Step how to enter
   font-weight: 700;
 
   @include mq(lg) {
+    font-size: 18px;
+  }
+  @include mq(xl) {
     font-size: 20px;
   }
 }
 
 .step__text-content {
+  font-feature-settings: "palt";
+  @include mq(md) {
+    font-size: 14px;
+  }
+  @include mq(xl) {
+    font-size: 16px;
+  }
 }
 
 .step__text-link {
@@ -711,7 +739,7 @@ Step how to enter
   font-weight: 700;
   align-items: center;
 
-  @include mq(lg) {
+  @include mq(xl) {
     font-size: 16px;
   }
 
