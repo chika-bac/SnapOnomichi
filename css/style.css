@@ -1387,9 +1387,35 @@ Step how to enter
   top: 32px;
   left: 0;
 }
+@media screen and (min-width: 768px) {
+  .step__bg-left {
+    left: 60px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .step__bg-left {
+    top: 72px;
+    left: 65px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__bg-left {
+    top: 60px;
+    left: 36px;
+  }
+}
 .step__bg-left img {
   width: 149px;
-  height: 223px;
+}
+@media screen and (min-width: 900px) {
+  .step__bg-left img {
+    width: 169px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__bg-left img {
+    width: 420px;
+  }
 }
 
 .step__top-cat1 {
@@ -1398,12 +1424,45 @@ Step how to enter
   right: -31px;
   width: 94px;
 }
+@media screen and (min-width: 768px) {
+  .step__top-cat1 {
+    top: 104px;
+    right: 105px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .step__top-cat1 {
+    width: 114px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__top-cat1 {
+    width: 214px;
+  }
+}
 
 .step__top-cat2 {
   position: absolute;
   width: 105px;
   top: 32px;
   right: 24px;
+}
+@media screen and (min-width: 768px) {
+  .step__top-cat2 {
+    top: 94px;
+    right: 183px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .step__top-cat2 {
+    width: 135px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step__top-cat2 {
+    right: 231px;
+    width: 238px;
+  }
 }
 
 .step__bg-pawpads-top {
@@ -1412,6 +1471,14 @@ Step how to enter
   height: 120px;
   top: 106px;
   right: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .step__bg-pawpads-top {
+    top: 268px;
+    right: 36px;
+    width: 100px;
+    height: 220px;
+  }
 }
 
 .step__bg-pawpads-middle {
@@ -1423,6 +1490,14 @@ Step how to enter
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+@media screen and (min-width: 1200px) {
+  .step__bg-pawpads-middle {
+    width: 100px;
+    height: 220px;
+    top: 700px;
+    left: 36px;
+  }
+}
 
 .step__bg-pawpads-bottom {
   position: absolute;
@@ -1432,4 +1507,9 @@ Step how to enter
   right: 20px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+@media screen and (min-width: 900px) {
+  .step__bg-pawpads-bottom {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

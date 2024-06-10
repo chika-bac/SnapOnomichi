@@ -789,9 +789,30 @@ Step how to enter
   top: 32px;
   left: 0;
 
+  @include mq(md) {
+    left: 60px;
+  }
+
+  @include mq(lg) {
+    top: 72px;
+    left: 65px;
+  }
+
+  @include mq(xl) {
+    top: 60px;
+    left: 36px;
+  }
+
   & img {
     width: 149px;
-    height: 223px;
+
+    @include mq(lg) {
+      width: 169px;
+    }
+
+    @include mq(xl) {
+      width: 420px;
+    }
   }
 }
 
@@ -803,6 +824,19 @@ Step how to enter
   top: 37px;
   right: -31px;
   width: 94px;
+
+  @include mq(md) {
+    top: 104px;
+    right: 105px;
+  }
+
+  @include mq(lg) {
+    width: 114px;
+  }
+
+  @include mq(xl) {
+    width: 214px;
+  }
 }
 
 .step__top-cat2 {
@@ -810,6 +844,20 @@ Step how to enter
   width: 105px;
   top: 32px;
   right: 24px;
+
+  @include mq(md) {
+    top: 94px;
+    right: 183px;
+  }
+
+  @include mq(lg) {
+    width: 135px;
+  }
+
+  @include mq(xl) {
+    right: 231px;
+    width: 238px;
+  }
 }
 
 .step__bg-pawpads {
@@ -821,6 +869,13 @@ Step how to enter
   height: 120px;
   top: 106px;
   right: 20px;
+
+  @include mq(xl) {
+    top: 268px;
+    right: 36px;
+    width: 100px;
+    height: 220px;
+  }
 }
 
 .step__bg-pawpads-middle {
@@ -830,6 +885,13 @@ Step how to enter
   top: 582px;
   left: 20px;
   transform: rotate(180deg);
+
+  @include mq(xl) {
+    width: 100px;
+    height: 220px;
+    top: 700px;
+    left: 36px;
+  }
 }
 
 .step__bg-pawpads-bottom {
@@ -839,4 +901,8 @@ Step how to enter
   top: 912px;
   right: 20px;
   transform: rotate(180deg);
+
+  @include mq(lg) {
+    display: none;
+  }
 }
