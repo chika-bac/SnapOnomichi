@@ -33,6 +33,11 @@
 .link__border {
   text-decoration: underline;
 }
+
+.font-palt {
+  font-feature-settings: "palt";
+}
+
 /*!
 fv
 ------------------------------
@@ -273,7 +278,6 @@ about
   align-items: center;
   gap: 24px;
   text-align: center;
-  font-feature-settings: "palt";
 
   @include mq(lg) {
     gap: 32px;
@@ -576,7 +580,7 @@ Step how to enter
 }
 
 .step__content {
-  margin-top: 32px;
+  margin-top: 41px;
 
   @include mq(lg) {
     margin-top: 40px;
@@ -592,7 +596,7 @@ Step how to enter
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 32px;
+    gap: 40px;
   }
 }
 
@@ -638,7 +642,7 @@ Step how to enter
 }
 
 .step__item-number {
-  padding-top: 31px;
+  padding-top: 33px;
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-josefin);
@@ -701,7 +705,7 @@ Step how to enter
     margin-top: 20px;
   }
   @include mq(xl) {
-    margin-top: 24px;
+    margin-top: 30px;
   }
 }
 
@@ -718,7 +722,6 @@ Step how to enter
 }
 
 .step__text-content {
-  font-feature-settings: "palt";
   @include mq(md) {
     font-size: 14px;
   }
@@ -776,7 +779,7 @@ Step how to enter
   text-align: center;
 
   @include mq(lg) {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }
 
@@ -804,7 +807,7 @@ Step how to enter
   }
 
   & img {
-    width: 149px;
+    width: 134px;
 
     @include mq(lg) {
       width: 169px;

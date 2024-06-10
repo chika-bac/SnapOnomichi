@@ -568,6 +568,11 @@ layout > footer
   text-decoration: underline;
 }
 
+.font-palt {
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+}
+
 /*!
 fv
 ------------------------------
@@ -810,8 +815,6 @@ about
           align-items: center;
   gap: 24px;
   text-align: center;
-  -webkit-font-feature-settings: "palt";
-          font-feature-settings: "palt";
 }
 @media screen and (min-width: 900px) {
   .about__content {
@@ -1116,7 +1119,7 @@ Step how to enter
 }
 
 .step__content {
-  margin-top: 32px;
+  margin-top: 41px;
 }
 @media screen and (min-width: 900px) {
   .step__content {
@@ -1148,7 +1151,7 @@ Step how to enter
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 32px;
+    gap: 40px;
   }
 }
 
@@ -1196,7 +1199,7 @@ Step how to enter
 }
 
 .step__item-number {
-  padding-top: 31px;
+  padding-top: 33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1282,7 +1285,7 @@ Step how to enter
 }
 @media screen and (min-width: 1200px) {
   .step__text {
-    margin-top: 24px;
+    margin-top: 30px;
   }
 }
 
@@ -1301,10 +1304,6 @@ Step how to enter
   }
 }
 
-.step__text-content {
-  -webkit-font-feature-settings: "palt";
-          font-feature-settings: "palt";
-}
 @media screen and (min-width: 768px) {
   .step__text-content {
     font-size: 14px;
@@ -1374,7 +1373,7 @@ Step how to enter
 }
 @media screen and (min-width: 900px) {
   .step__button {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }
 
@@ -1405,7 +1404,7 @@ Step how to enter
   }
 }
 .step__bg-left img {
-  width: 149px;
+  width: 134px;
 }
 @media screen and (min-width: 900px) {
   .step__bg-left img {
