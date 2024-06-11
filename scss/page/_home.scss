@@ -909,3 +909,157 @@ Step how to enter
     display: none;
   }
 }
+
+/*!
+prize
+------------------------------
+*/
+.prize {
+  background: var(--color-white);
+  border-radius: 24px;
+  padding-bottom: 34px;
+}
+
+.prize__bg {
+  display: none;
+}
+
+.prize__bg-left {
+}
+
+.prize__bg-right {
+}
+
+.prize__inner {
+  position: relative;
+  margin-top: 83px;
+  padding-inline: 20px;
+}
+
+.prize__deco {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -83px;
+  width: 237.6px;
+  height: 83px;
+}
+
+.prize__heading {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -60px;
+}
+
+.prize__icon {
+}
+
+.prize__heading-en {
+}
+
+.prize__heading-ja {
+  &::after {
+    width: 160px;
+
+    @include mq(lg) {
+      // width: 320px;
+    }
+  }
+}
+
+.prize__content {
+  padding-top: 60px;
+}
+
+.prize__text {
+  text-align: center;
+}
+
+.prize__items {
+  padding-top: calc(24px + 24px);
+  padding-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: calc(15px + 24px);
+  column-gap: 15px;
+}
+
+.prize__item {
+  width: calc(50% - 7.5px);
+  position: relative;
+}
+
+.prize__item-inner {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.prize__item-number {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+}
+
+.prize__item-img {
+  & img {
+    object-fit: cover;
+  }
+}
+
+.prize__item-content {
+  background: var(--color-gray);
+  position: relative;
+}
+
+.prize__item-title {
+  text-align: center;
+  font-weight: 700;
+  min-height: 56px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prize__item-zoom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+}
+
+.prize__button {
+}
+
+.prize__dialog {
+}
+
+.prize__dialog-inner {
+}
+
+.prize__dialog-img {
+}
+
+.prize__dialog-content {
+}
+
+.prize__dialog-title {
+}
+
+.prize__dialog-text {
+}
+
+.prize__dialog-close {
+}
+
+.js-dialog-close {
+}
+
+.slope-bg {
+}
