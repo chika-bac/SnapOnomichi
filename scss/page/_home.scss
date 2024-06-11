@@ -1038,6 +1038,19 @@ prize
 }
 
 .prize__dialog {
+  position: fixed;
+  inset: 0;
+  min-width: 336px;
+  border-radius: 24px;
+  background: var(--color-white);
+  padding: 0 0 56px 0;
+  border: none;
+  color: var(--color-brown);
+
+  &::backdrop {
+    opacity: 0.6;
+    background: #000000;
+  }
 }
 
 .prize__dialog-inner {
@@ -1047,18 +1060,26 @@ prize
 }
 
 .prize__dialog-content {
+  margin-top: 39px;
+  text-align: center;
+  padding-inline: 20px;
 }
 
 .prize__dialog-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .prize__dialog-text {
 }
 
 .prize__dialog-close {
-}
+  margin-top: 16px;
 
-.js-dialog-close {
+  & button {
+    outline: none;
+  }
 }
 
 .slope-bg {

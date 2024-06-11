@@ -45,3 +45,19 @@ const swiper = new Swiper(".about__swiper", {
 // /*
 // モーダル
 // ================================================ */
+const openButtons = document.querySelectorAll(".js-dialog-open");
+const closeButtons = document.querySelectorAll(".js-dialog-close");
+
+openButtons.forEach((button) => {
+  const dialog = document.querySelector(button.dataset.dialog);
+  button.addEventListener("click", () => {
+    dialog.showModal();
+  });
+});
+
+closeButtons.forEach((button) => {
+  const dialog = button.closest("dialog");
+  button.addEventListener("click", () => {
+    dialog.close();
+  });
+});
