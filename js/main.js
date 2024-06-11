@@ -1,5 +1,5 @@
 // /*
-// スライドメニュー: js
+// スライドメニュー
 // ================================================ */
 const menuIcon = document.querySelector("#js-drawer-icon");
 const menuPanel = document.querySelector("#js-drawer-panel");
@@ -13,7 +13,7 @@ if (menuIcon) {
 }
 
 /*
-スムーススクロール：js
+スムーススクロール
 ================================================ */
 // ドロワーメニュー内のリンククリック時にドロワーを閉じる
 document.querySelectorAll('#js-drawer-panel a[href^="#"]').forEach((link) => {
@@ -24,7 +24,7 @@ document.querySelectorAll('#js-drawer-panel a[href^="#"]').forEach((link) => {
 });
 
 /*
-Swiper: js
+Swiper
 ================================================ */
 const swiper = new Swiper(".about__swiper", {
   loop: true,
@@ -41,3 +41,7 @@ const swiper = new Swiper(".about__swiper", {
     },
   },
 });
+
+// /*
+// モーダル
+// ================================================ */

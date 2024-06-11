@@ -273,80 +273,140 @@
       </section>
       <!-- end step -->
 
-      <!-- contact -->
-      <section id="contact" class="contact section">
-        <div class="contact__inner inner">
-          <h2 class="Contact__title heading">Contact</h2>
-
-          <div class="contact__box contents-top">
-            <p class="contact__attention"><span class="contact__attention-tag">＊</span>は入力必須項目です</p>
-            <form action="post" class="contact__form">
-              <div class="contact__fields">
-                <div class="contact__field">
-                  <!-- name -->
-                  <div class="form-field">
-                    <div class="form-field__head">
-                      <label for="your-name" class="form-field__label">お名前<span class="form-field__tag">＊</span></label>
-                    </div>
-                    <div class="form-field__item">
-                      <input type="text" name="your-name" id="your-name" class="form-text" />
-                    </div>
-                  </div>
-                  <!-- email -->
-                  <div class="form-field">
-                    <div class="form-field__head">
-                      <label for="your-email" class="form-field__label">メールアドレス<span class="form-field__tag">＊</span></label>
-                    </div>
-                    <div class="form-field__item">
-                      <input type="email" name="your-email" id="your-email" class="form-text" />
-                    </div>
-                  </div>
-                  <!-- company or individual -->
-                  <div class="form-field">
-                    <div class="form-field__head">
-                      <div class="form-field__label">法人/個人の選択<span class="form-field__tag">＊</span></div>
-                    </div>
-                    <div class="form-field__item">
-                      <div class="form-field__radios">
-                        <label class="form-radio">
-                          <input type="radio" name="your-class" class="form-radio__input" checked />
-                          <span class="form-radio__text">法人</span>
-                        </label>
-                        <label class="form-radio">
-                          <input type="radio" name="your-class" class="form-radio__input" />
-                          <span class="form-radio__text">個人</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- message -->
-                  <div class="form-field">
-                    <div class="form-field__head">
-                      <label for="your-message" class="form-field__label">お問い合わせ内容<span class="form-field__tag">＊</span></label>
-                    </div>
-                    <div class="form-field__item">
-                      <textarea name="your-message" id="your-message" class="form-textarea"></textarea>
-                    </div>
-                  </div>
+      <!-- prize -->
+      <section class="prize">
+        <div class="prize__inner">
+          <h2 class="prize__heading heading">
+            <span class="prize__icon heading-icon"><img src="./images/icon-prize.svg" alt="" /></span>
+            <span class="prize__heading-en heading-en">Prizes</span>
+            <span class="prize__heading-ja heading-ja">キャンペーン特典</span>
+          </h2>
+          <div class="prize__content">
+            <p class="prize__text">キャンペーンにご参加いただたい方の中から100名様に、尾道で人気のお土産セットやオリジナルグッズをプレゼント！</p>
+            <div class="prize__items">
+              <div class="prize__item" data-dialog="#js-dialog-1">
+                <div class="prize__item-number"><img src="./images/prize-item-icon-1.png" alt="" /></div>
+                <div class="prize__item-img">
+                  <img src="./images/prize-img-1@2x.png" alt="" />
                 </div>
-                <!-- end contact__field -->
-
-                <!-- privacy -->
-                <div class="contact__privacy">
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="form-checkbox" id="form-checkbox" class="form-checkbox__input" />
-                    <span class="form-checkbox__text"> <a href="" target="_blank">プライバシーポリシー</a>に同意します。 </span>
-                  </label>
-                </div>
-                <div class="contact__button">
-                  <input type="submit" value="送信" class="button" />
+                <div class="prize__item-content">
+                  <h3 class="prize__item-title">海街洋菓子店<br />スイーツセット</h3>
+                  <img src="./images/prize-item-zoom.png" class="prize__item-zoom" alt="" />
                 </div>
               </div>
-            </form>
+              <div class="prize__item" data-dialog="#js-dialog-2">
+                <div class="prize__item-number"><img src="./images/prize-item-icon-2.png" alt="" /></div>
+                <div class="prize__item-img">
+                  <img src="./images/prize-img-2@2x.png" alt="" />
+                </div>
+                <div class="prize__item-content">
+                  <h3 class="prize__item-title">ねこねこ<br />グッズセット</h3>
+                  <img src="./images/prize-item-zoom.png" class="prize__item-zoom" alt="" />
+                </div>
+              </div>
+              <div class="prize__item" data-dialog="#js-dialog-3">
+                <div class="prize__item-number"><img src="./images/prize-item-icon-3.png" alt="" /></div>
+                <div class="prize__item-img">
+                  <img src="./images/prize-img-3@2x.png" alt="" />
+                </div>
+                <div class="prize__item-content">
+                  <h3 class="prize__item-title">尾道ラーメンセット</h3>
+                  <img src="./images/prize-item-zoom.png" class="prize__item-zoom" alt="" />
+                </div>
+              </div>
+              <div class="prize__item" data-dialog="#js-dialog-4">
+                <div class="prize__item-number"><img src="./images/prize-item-icon-4.png" alt="" /></div>
+                <div class="prize__item-img">
+                  <img src="./images/prize-img-4@2x.png" alt="" />
+                </div>
+                <div class="prize__item-content">
+                  <h3 class="prize__item-title">おうちで<br />喫茶店セット</h3>
+                  <img src="./images/prize-item-zoom.png" class="prize__item-zoom" alt="" />
+                </div>
+              </div>
+              <div class="prize__item" data-dialog="#js-dialog-5">
+                <div class="prize__item-number"><img src="./images/prize-item-icon-5.png" alt="" /></div>
+                <div class="prize__item-img">
+                  <img src="./images/prize-img-5@2x.png" alt="" />
+                </div>
+                <div class="prize__item-content">
+                  <h3 class="prize__item-title">工房尾道帆布<br />オリジナルトート</h3>
+                  <img src="./images/prize-item-zoom.png" class="prize__item-zoom" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="prize__button">
+              <a href="" class="button button-md">#見つけて尾道レトロ の最新投稿を見る</a>
+            </div>
+
+            <!-- dialogコンテンツ -->
+            <dialog class="prize__dialog" id="js-dialog-1">
+              <div class="prize__dialog-inner">
+                <div class="prize__dialog-img">
+                  <img src="./images/prize-img-1@2x.png" alt="" />
+                </div>
+                <div class="prize__dialog-content">
+                  <h3 class="prize__dialog-title">海街洋菓子店スイーツセット</h3>
+                  <p class="prize__dialog-text">海沿いにあるケーキ屋さん、<br />海街洋菓子店の人気焼き菓子詰め合わせセット。<br />こだわりのバターをふんだんに使ったリッチな味わいで、濃厚なコクが後を引く美味しさです。！</p>
+                  <button class="prize__dialog-close js-dialog-close">閉じる</button>
+                </div>
+              </div>
+            </dialog>
+            <dialog class="prize__dialog" id="js-dialog-2">
+              <div class="prize__dialog-inner">
+                <div class="prize__dialog-img">
+                  <img src="./images/prize-img-2@2x.png" alt="" />
+                </div>
+                <div class="prize__dialog-content">
+                  <h3 class="prize__dialog-title">ねこねこグッズセット</h3>
+                  <p class="prize__dialog-text">お土産としても大人気の猫グッズを集めました。<br />お家で、オフィスで、<br />眺めているだけでも癒されてしまう<br />愛らしい猫たちと一緒に。</p>
+                  <button class="prize__dialog-close js-dialog-close">閉じる</button>
+                </div>
+              </div>
+            </dialog>
+            <dialog class="prize__dialog" id="js-dialog-3">
+              <div class="prize__dialog-inner">
+                <div class="prize__dialog-img">
+                  <img src="./images/prize-img-3@2x.png" alt="" />
+                </div>
+                <div class="prize__dialog-content">
+                  <h3 class="prize__dialog-title">尾道ラーメンセット</h3>
+                  <p class="prize__dialog-text">全国にファンがいる本格的な尾道ラーメンをお家で。<br />尾道ラーメンといえば、透き通った醤油スープと、<br />平打ち麺が特徴です。<br />コクがありながらまろやかな味のスープは<br />思わず飲み干したくなるお味。</p>
+                  <button class="prize__dialog-close js-dialog-close">閉じる</button>
+                </div>
+              </div>
+            </dialog>
+            <dialog class="prize__dialog" id="js-dialog-4">
+              <div class="prize__dialog-inner">
+                <div class="prize__dialog-img">
+                  <img src="./images/prize-img-4@2x.png" alt="" />
+                </div>
+                <div class="prize__dialog-content">
+                  <h3 class="prize__dialog-title">おうちで喫茶店セット</h3>
+                  <p class="prize__dialog-text">尾道の人気喫茶店のコーヒー豆を使用したドリップバッグとマグカップのセット。<br />香り高い深煎りの豆は、カフェオレにするのも◎<br />カンタンに楽しめるドリップバッグは、<br />オフィスや在宅ワーク時、忙しい家事の合間など<br />日常のさまざまなシーンで大活躍。</p>
+                  <button class="prize__dialog-close js-dialog-close">閉じる</button>
+                </div>
+              </div>
+            </dialog>
+            <dialog class="prize__dialog" id="js-dialog-5">
+              <div class="prize__dialog-inner">
+                <div class="prize__dialog-img">
+                  <img src="./images/prize-img-4@2x.png" alt="" />
+                </div>
+                <div class="prize__dialog-content">
+                  <h3 class="prize__dialog-title">工房尾道帆布オリジナルトート</h3>
+                  <p class="prize__dialog-text">工房尾道帆布とコラボした、<br />本キャンペーンオリジナルトート。<br />シンプルなデザインで、シーンを選ばず<br />お使いいただけます。<br />しっかりした生地で、<br />年月とともに変化していく風合いも魅力。</p>
+                  <button class="prize__dialog-close js-dialog-close">閉じる</button>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
+        <div class="prize__bottom">
+          <img src="./images/prize-bg_pic@2x.png" alt="" />
+        </div>
       </section>
-      <!-- end contact -->
+      <!-- end prize -->
     </main>
   </body>
 </html>
