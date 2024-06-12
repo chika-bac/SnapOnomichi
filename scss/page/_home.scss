@@ -918,22 +918,72 @@ prize
   background: var(--color-white);
   border-radius: 24px;
   padding-bottom: 34px;
+
+  @include mq(lg) {
+    padding-bottom: 53px;
+    position: relative;
+    margin-top: -20px;
+    width: calc(1024px / 1512px * 100%);
+    margin-inline: auto;
+  }
+
+  @include mq(xl) {
+    max-width: 1024px;
+    margin-top: 200px;
+  }
 }
 
 .prize__bg {
   display: none;
+
+  @include mq(lg) {
+    display: block;
+  }
+}
+
+.prize__bg-left,
+.prize__bg-right {
+  @include mq(lg) {
+    position: absolute;
+    width: 210px;
+  }
+
+  @include mq(xl) {
+    width: 315px;
+  }
+
+  // height: 86px;
 }
 
 .prize__bg-left {
+  @include mq(lg) {
+    left: 0;
+    top: -80px;
+  }
+  @include mq(xl) {
+    top: -120px;
+  }
 }
 
 .prize__bg-right {
+  @include mq(lg) {
+    right: 0;
+    top: -80px;
+  }
+
+  @include mq(xl) {
+    top: -120px;
+  }
 }
 
 .prize__inner {
   position: relative;
   margin-top: 83px;
   padding-inline: 20px;
+
+  @include mq(xl) {
+    margin-top: -86px;
+  }
 }
 
 .prize__deco {
@@ -943,6 +993,12 @@ prize
   top: -83px;
   width: 237.6px;
   height: 83px;
+
+  @include mq(xl) {
+    top: -148px;
+    width: 365.624px;
+    height: 148.967px;
+  }
 }
 
 .prize__heading {
@@ -951,6 +1007,10 @@ prize
   left: 50%;
   transform: translateX(-50%);
   top: -60px;
+
+  @include mq(xl) {
+    top: -100px;
+  }
 }
 
 .prize__icon {
