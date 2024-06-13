@@ -945,14 +945,8 @@ prize
 .prize__bg-right {
   @include mq(lg) {
     position: absolute;
-    width: 210px;
+    width: clamp(13.125rem, 3.474rem + 17.16vw, 19.688rem);
   }
-
-  @include mq(xl) {
-    width: 315px;
-  }
-
-  // height: 86px;
 }
 
 .prize__bg-left {
@@ -983,6 +977,7 @@ prize
 
   @include mq(xl) {
     margin-top: -86px;
+    padding-inline: 56px;
   }
 }
 
@@ -1009,7 +1004,7 @@ prize
   top: -60px;
 
   @include mq(xl) {
-    top: -100px;
+    top: -120px;
   }
 }
 
@@ -1024,13 +1019,21 @@ prize
     width: 160px;
 
     @include mq(lg) {
-      // width: 320px;
+      width: 256px;
     }
   }
 }
 
 .prize__content {
   padding-top: 60px;
+
+  @include mq(lg) {
+    padding-top: 110px;
+  }
+
+  @include mq(xl) {
+    padding-top: 60px;
+  }
 }
 
 .prize__text {
@@ -1039,22 +1042,47 @@ prize
 
 .prize__items {
   padding-top: calc(24px + 24px);
-  padding-bottom: 24px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: calc(15px + 24px);
   column-gap: 15px;
+
+  @include mq(lg) {
+    padding-top: calc(32px + 40px);
+    row-gap: calc(40px + 50px);
+    column-gap: 20px;
+  }
+  @include mq(xl) {
+    padding-top: calc(32px + 50px);
+    column-gap: 32px;
+  }
 }
 
 .prize__item {
   width: calc(50% - 7.5px);
   position: relative;
+
+  @include mq(lg) {
+    &:nth-child(1),
+    &:nth-child(2) {
+      flex: 1 1 calc(50% - 16px);
+    }
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      flex: 1 1 calc(33.33% - 22px);
+    }
+  }
 }
 
 .prize__item-inner {
   border-radius: 8px;
   overflow: hidden;
+
+  @include mq(lg) {
+    border-radius: 24px;
+  }
 }
 
 .prize__item-number {
@@ -1063,11 +1091,24 @@ prize
   left: 50%;
   transform: translateX(-50%);
   width: 48px;
+
+  @include mq(lg) {
+    top: -40px;
+    width: 80px;
+  }
+  @include mq(xl) {
+    top: -50px;
+    width: 100px;
+  }
 }
 
 .prize__item-img {
   & img {
     object-fit: cover;
+
+    @include mq(lg) {
+      aspect-ratio: 440 / 340;
+    }
   }
 }
 
@@ -1084,6 +1125,20 @@ prize
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mq(lg) {
+    .prize__item:nth-child(1) &,
+    .prize__item:nth-child(2) & {
+      font-size: 20px;
+      min-height: 120px;
+    }
+
+    .prize__item:nth-child(3) &,
+    .prize__item:nth-child(4) &,
+    .prize__item:nth-child(5) & {
+      min-height: 80px;
+    }
+  }
 }
 
 .prize__item-zoom {
@@ -1092,9 +1147,40 @@ prize
   right: 0;
   width: 36px;
   height: 36px;
+
+  .prize__item:nth-child(1) &,
+  .prize__item:nth-child(2) & {
+    @include mq(lg) {
+      width: 78px;
+      height: 78px;
+    }
+    @include mq(xl) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .prize__item:nth-child(3) &,
+  .prize__item:nth-child(4) &,
+  .prize__item:nth-child(5) & {
+    @include mq(lg) {
+      width: 44px;
+      height: 44px;
+    }
+    @include mq(xl) {
+      width: 64px;
+      height: 64px;
+    }
+  }
 }
 
 .prize__button {
+  text-align: center;
+  margin-top: 18px;
+
+  @include mq(lg) {
+    margin-top: 40px;
+  }
 }
 
 .prize__dialog {
@@ -1106,6 +1192,12 @@ prize
   padding: 0 0 56px 0;
   border: none;
   color: var(--color-brown);
+
+  @include mq(lg) {
+    width: 480px;
+    height: 650px;
+    padding: 0 0 40px 0;
+  }
 
   &::backdrop {
     opacity: 0.6;
@@ -1123,12 +1215,21 @@ prize
   margin-top: 39px;
   text-align: center;
   padding-inline: 20px;
+
+  @include mq(lg) {
+    margin-top: 32px;
+    padding-inline: 40px;
+  }
 }
 
 .prize__dialog-title {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 12px;
+
+  @include mq(lg) {
+    font-size: 20px;
+  }
 }
 
 .prize__dialog-text {
@@ -1137,8 +1238,17 @@ prize
 .prize__dialog-close {
   margin-top: 16px;
 
+  @include mq(lg) {
+    margin-top: 30px;
+  }
+
   & button {
     outline: none;
+
+    @include mq(lg) {
+      padding: 4px 22px 6px 22px;
+      font-size: 16px;
+    }
   }
 }
 
