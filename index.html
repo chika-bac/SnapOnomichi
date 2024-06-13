@@ -280,7 +280,10 @@
           <img src="./images/prize-pattern-right.png" class="prize__bg-right" alt="" />
         </div>
         <div class="prize__inner">
-          <img src="./images/prize-deco.png" class="prize__deco" alt="" />
+          <picture class="prize__deco">
+            <source media="(min-width: 768px)" srcset="./images/prize-deco-pc.png" />
+            <img src="./images/prize-deco-sp.png" alt="" />
+          </picture>
 
           <h2 class="prize__heading heading">
             <span class="prize__icon heading-icon"><img src="./images/icon-prize.svg" alt="" /></span>
@@ -309,7 +312,7 @@
                     <img src="./images/prize-img-2@2x.png" alt="" />
                   </div>
                   <div class="prize__item-content">
-                    <h3 class="prize__item-title">ねこねこ<br />グッズセット</h3>
+                    <h3 class="prize__item-title">ねこねこ<br class="hidden-pc" />グッズセット</h3>
                     <img src="./images/prize-item-zoom.png" class="prize__item-zoom" alt="" />
                   </div>
                 </div>

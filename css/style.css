@@ -1537,7 +1537,7 @@ prize
 @media screen and (min-width: 1200px) {
   .prize {
     max-width: 1024px;
-    margin-top: 200px;
+    margin-top: 243px;
   }
 }
 
@@ -1599,9 +1599,14 @@ prize
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: -83px;
+  top: -81px;
   width: 237.6px;
   height: 83px;
+}
+@media screen and (min-width: 768px) {
+  .prize__deco {
+    top: -94px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .prize__deco {
@@ -1617,7 +1622,7 @@ prize
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: -60px;
+  top: -62px;
 }
 @media screen and (min-width: 1200px) {
   .prize__heading {
@@ -1669,8 +1674,8 @@ prize
 }
 @media screen and (min-width: 900px) {
   .prize__items {
-    padding-top: 72px;
-    row-gap: 90px;
+    padding-top: 85px;
+    row-gap: 82px;
     -webkit-column-gap: 20px;
        -moz-column-gap: 20px;
             column-gap: 20px;
@@ -1678,7 +1683,6 @@ prize
 }
 @media screen and (min-width: 1200px) {
   .prize__items {
-    padding-top: 82px;
     -webkit-column-gap: 32px;
        -moz-column-gap: 32px;
             column-gap: 32px;
@@ -1721,25 +1725,43 @@ prize
   width: 48px;
 }
 @media screen and (min-width: 900px) {
-  .prize__item-number {
+  .prize__item:nth-child(1) .prize__item-number, .prize__item:nth-child(2) .prize__item-number {
     top: -40px;
     width: 80px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .prize__item-number {
+  .prize__item:nth-child(1) .prize__item-number, .prize__item:nth-child(2) .prize__item-number {
     top: -50px;
     width: 100px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .prize__item:nth-child(3) .prize__item-number, .prize__item:nth-child(4) .prize__item-number, .prize__item:nth-child(5) .prize__item-number {
+    top: -30px;
+    width: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prize__item:nth-child(3) .prize__item-number, .prize__item:nth-child(4) .prize__item-number, .prize__item:nth-child(5) .prize__item-number {
+    top: -40px;
+    width: 80px;
   }
 }
 
 .prize__item-img img {
   -o-object-fit: cover;
      object-fit: cover;
+  aspect-ratio: 160/140;
 }
 @media screen and (min-width: 900px) {
-  .prize__item-img img {
+  .prize__item:nth-child(1) .prize__item-img img, .prize__item:nth-child(2) .prize__item-img img {
     aspect-ratio: 440/340;
+  }
+}
+@media screen and (min-width: 900px) {
+  .prize__item:nth-child(3) .prize__item-img img, .prize__item:nth-child(4) .prize__item-img img, .prize__item:nth-child(5) .prize__item-img img {
+    aspect-ratio: 280/240;
   }
 }
 

@@ -929,7 +929,7 @@ prize
 
   @include mq(xl) {
     max-width: 1024px;
-    margin-top: 200px;
+    margin-top: 243px;
   }
 }
 
@@ -985,9 +985,13 @@ prize
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -83px;
+  top: -81px;
   width: 237.6px;
   height: 83px;
+
+  @include mq(md) {
+  top: -94px;
+  }
 
   @include mq(xl) {
     top: -148px;
@@ -1001,7 +1005,7 @@ prize
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  top: -60px;
+  top: -62px;
 
   @include mq(xl) {
     top: -120px;
@@ -1049,12 +1053,11 @@ prize
   column-gap: 15px;
 
   @include mq(lg) {
-    padding-top: calc(32px + 40px);
-    row-gap: calc(40px + 50px);
+    padding-top: 85px;
+    row-gap: 82px;
     column-gap: 20px;
   }
   @include mq(xl) {
-    padding-top: calc(32px + 50px);
     column-gap: 32px;
   }
 }
@@ -1092,22 +1095,50 @@ prize
   transform: translateX(-50%);
   width: 48px;
 
-  @include mq(lg) {
-    top: -40px;
-    width: 80px;
+  .prize__item:nth-child(1) &,
+  .prize__item:nth-child(2) & {
+    @include mq(lg) {
+      top: -40px;
+      width: 80px;
+    }
+    @include mq(xl) {
+      top: -50px;
+      width: 100px;
+    }
   }
-  @include mq(xl) {
-    top: -50px;
-    width: 100px;
+
+  .prize__item:nth-child(3) &,
+  .prize__item:nth-child(4) &,
+  .prize__item:nth-child(5) &{
+    @include mq(lg) {
+      top: -30px;
+      width: 60px;
+    }
+    @include mq(xl) {
+      top: -40px;
+      width: 80px;
+    }
   }
 }
 
 .prize__item-img {
   & img {
     object-fit: cover;
+    aspect-ratio: 160 / 140;
 
-    @include mq(lg) {
-      aspect-ratio: 440 / 340;
+    .prize__item:nth-child(1) &,
+    .prize__item:nth-child(2) & {
+      @include mq(lg) {
+        aspect-ratio: 440 / 340;
+      }
+    }
+
+    .prize__item:nth-child(3) &,
+    .prize__item:nth-child(4) &,
+    .prize__item:nth-child(5) &{
+      @include mq(lg) {
+        aspect-ratio: 280 / 240;
+      }
     }
   }
 }
