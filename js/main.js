@@ -24,9 +24,9 @@ document.querySelectorAll('#js-drawer-panel a[href^="#"]').forEach((link) => {
 });
 
 /*
-Swiper
+About Swiper
 ================================================ */
-const swiper = new Swiper(".about__swiper", {
+const aboutSwiper = new Swiper(".about__swiper", {
   loop: true,
   speed: 4000,
   autoplay: {
@@ -60,4 +60,28 @@ closeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     dialog.close();
   });
+});
+
+/*
+Spot Swiper
+================================================ */
+const spotSwiper = new Swiper(".spot__swiper", {
+  loop: true,
+  // speed: 4000,
+  // autoplay: {
+  //   delay: 0,
+  // },
+  // slidesPerView: "auto",
+  // spaceBetween: 10,
+  // breakpoints: {
+  //   960: {
+  //     spaceBetween: 20,
+  //   },
+  // },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".spot__swiper-next",
+    prevEl: ".spot__swiper-prev",
+  },
 });
