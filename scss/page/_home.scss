@@ -1344,7 +1344,7 @@ spot
   transform: rotate(180deg);
 
   @include mq(lg) {
-    bottom: -119px;
+    bottom: -101px;
   }
 }
 
@@ -1371,6 +1371,7 @@ spot
 
   @include mq(lg) {
     flex-direction: column;
+    gap: 13px;
   }
 }
 .spot__heading-icon {
@@ -1391,6 +1392,7 @@ spot
   @include mq(lg) {
     writing-mode: vertical-rl;
     font-size: 40px;
+    letter-spacing: 10px;
   }
 }
 
@@ -1473,7 +1475,7 @@ spot swiper
 
   @include mq(lg) {
     position: absolute;
-    top: 486px;
+    top: 504px;
     left: 50%;
     transform: translateX(-50%);
     max-width: 944px;
@@ -1552,7 +1554,7 @@ spot swiper
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
   }
 }
 
@@ -1578,7 +1580,7 @@ spot swiper
     display: block;
     position: absolute;
     left: 36px;
-    bottom: 0px;
+    bottom: 18px;
     width: 100px;
   }
 }

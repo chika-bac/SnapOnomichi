@@ -1977,7 +1977,7 @@ spot
 }
 @media screen and (min-width: 900px) {
   .spot__wave-bottom {
-    bottom: -119px;
+    bottom: -101px;
   }
 }
 
@@ -2020,6 +2020,7 @@ spot
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 13px;
   }
 }
 
@@ -2047,6 +2048,7 @@ spot
         -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
     font-size: 40px;
+    letter-spacing: 10px;
   }
 }
 
@@ -2130,7 +2132,7 @@ spot swiper
 @media screen and (min-width: 900px) {
   .spot__navigation {
     position: absolute;
-    top: 486px;
+    top: 504px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -2229,9 +2231,9 @@ spot swiper
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -2259,7 +2261,7 @@ spot swiper
     display: block;
     position: absolute;
     left: 36px;
-    bottom: 0px;
+    bottom: 18px;
     width: 100px;
   }
 }/*# sourceMappingURL=style.css.map */
