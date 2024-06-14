@@ -71,8 +71,13 @@ const spotSwiper = new Swiper(".spot__swiper", {
   // autoplay: {
   //   delay: 0,
   // },
-  // slidesPerView: "auto",
-  // spaceBetween: 10,
+  grabCursor: true,
+  slidesPerView: "auto",
+  spaceBetween: 16,
+  // 初期表示するスライドの番号（0〜）
+  initialSlide: 1,
+  // アクティブなスライドを中央に配置する
+  centeredSlides: true,
   // breakpoints: {
   //   960: {
   //     spaceBetween: 20,

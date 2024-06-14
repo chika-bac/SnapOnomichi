@@ -1933,4 +1933,133 @@ prize
   .slope-bg {
     margin-top: 0;
   }
+}
+
+/*!
+spot
+------------------------------
+*/
+.spot {
+  background: var(--color-sub-dblue);
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.spot__wave-top,
+.spot__wave-bottom {
+  width: 100%;
+  height: 45.7px;
+  background-image: url(../../images/spots-wave-sp.png);
+  background-repeat: repeat-x;
+  position: absolute;
+}
+
+.spot__wave-top {
+  top: -45.7px;
+}
+
+.spot__wave-bottom {
+  bottom: -45px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.spot__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.spot__heading-icon {
+  width: 28px;
+}
+
+.spot__heading-ja {
+  color: var(--color-white);
+  -webkit-font-feature-settings: "pwid" on;
+          font-feature-settings: "pwid" on;
+  font-family: var(--font-family-kiwi);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.spot__content {
+  margin-top: 24px;
+}
+
+/*!
+spot swiper
+------------------------------
+*/
+.spot__item {
+  max-width: 240px;
+  height: 402.2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  background: var(--color-white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.spot__item-img img {
+  aspect-ratio: 240/180;
+}
+
+.spot__item-content {
+  padding-inline: 24px;
+}
+
+.spot__item-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.spot__swiper-prev,
+.spot__swiper-next {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .spot__swiper-prev,
+  .spot__swiper-next {
+    display: block;
+  }
+}
+
+.spot__bottom {
+  padding-inline: 20px;
+  text-align: center;
+}
+
+.spot__logo img {
+  width: 255px;
+}
+
+.spot__copy {
+  font-size: 11.444px;
+  color: var(--color-white);
+  padding-top: 16px;
+}
+
+.spot__button {
+  margin-top: 24px;
 }/*# sourceMappingURL=style.css.map */
