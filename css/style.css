@@ -1953,15 +1953,49 @@ spot
   background-repeat: repeat-x;
   position: absolute;
 }
+@media screen and (min-width: 900px) {
+  .spot__wave-top,
+  .spot__wave-bottom {
+    background-image: url(../../images/spots-wave-pc.png);
+    height: 120px;
+  }
+}
 
 .spot__wave-top {
   top: -45.7px;
+}
+@media screen and (min-width: 900px) {
+  .spot__wave-top {
+    top: -120px;
+  }
 }
 
 .spot__wave-bottom {
   bottom: -45px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+@media screen and (min-width: 900px) {
+  .spot__wave-bottom {
+    bottom: -119px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .spot__top {
+    padding-left: max(50% - 512px, 20px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 32px;
+  }
 }
 
 .spot__heading {
@@ -1980,9 +2014,22 @@ spot
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (min-width: 900px) {
+  .spot__heading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .spot__heading-icon {
   width: 28px;
+}
+@media screen and (min-width: 900px) {
+  .spot__heading-icon {
+    width: 56px;
+  }
 }
 
 .spot__heading-ja {
@@ -1994,9 +2041,23 @@ spot
   font-weight: 500;
   line-height: 1.25;
 }
+@media screen and (min-width: 900px) {
+  .spot__heading-ja {
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    font-size: 40px;
+  }
+}
 
 .spot__content {
   margin-top: 24px;
+}
+@media screen and (min-width: 900px) {
+  .spot__content {
+    margin-top: 0;
+    overflow: hidden;
+  }
 }
 
 /*!
@@ -2016,32 +2077,99 @@ spot swiper
   gap: 16px;
   border-radius: 12px;
   background: var(--color-white);
-  text-align: center;
   overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .spot__item {
+    max-width: 344px;
+    height: 542px;
+    gap: 24px;
+    border-radius: 24px;
+  }
 }
 
 .spot__item-img img {
   aspect-ratio: 240/180;
 }
+@media screen and (min-width: 900px) {
+  .spot__item-img img {
+    aspect-ratio: 344/240;
+  }
+}
 
 .spot__item-content {
   padding-inline: 24px;
 }
+@media screen and (min-width: 900px) {
+  .spot__item-content {
+    padding-inline: 32px;
+  }
+}
 
 .spot__item-title {
+  text-align: center;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 16px;
 }
+@media screen and (min-width: 900px) {
+  .spot__item-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}
 
-.spot__swiper-prev,
-.spot__swiper-next {
+.spot__item-text {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+
+.spot__navigation {
   display: none;
 }
 @media screen and (min-width: 900px) {
-  .spot__swiper-prev,
+  .spot__navigation {
+    position: absolute;
+    top: 486px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 944px;
+    width: 92.1875%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    z-index: 50;
+  }
+}
+
+.spot__swiper-prev,
+.spot__swiper-next {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: var(--color-yellow);
+  border-radius: 50%;
+}
+.spot__swiper-prev:after,
+.spot__swiper-next:after {
+  content: url(../../images/spot-icon-arrow.svg);
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 900px) {
   .spot__swiper-next {
-    display: block;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
@@ -2049,9 +2177,62 @@ spot swiper
   padding-inline: 20px;
   text-align: center;
 }
+@media screen and (min-width: 900px) {
+  .spot__bottom {
+    margin-top: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1024px;
+    margin-inline: auto;
+    padding-inline: 0;
+    width: calc(100% - 40px);
+    max-width: 1024px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .spot__bottom {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 
 .spot__logo img {
   width: 255px;
+}
+@media screen and (min-width: 900px) {
+  .spot__logo img {
+    width: clamp(23.125rem, -0.313rem + 41.67vw, 30.938rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .spot__bottom-msg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .spot__copy {
@@ -2059,7 +2240,26 @@ spot swiper
   color: var(--color-white);
   padding-top: 16px;
 }
+@media screen and (min-width: 900px) {
+  .spot__copy {
+    font-size: 16px;
+    padding-top: 0;
+  }
+}
 
 .spot__button {
   margin-top: 24px;
+}
+
+.spot__pawpads {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .spot__pawpads {
+    display: block;
+    position: absolute;
+    left: 36px;
+    bottom: 0px;
+    width: 100px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,6 @@
+// 画面はみ出しチェック
+// document.querySelectorAll("*").forEach((el) => (el.clientWidth > document.body.clientWidth ? console.log(el) : console.log("ないよ")));
+
 // /*
 // スライドメニュー
 // ================================================ */
@@ -36,7 +39,7 @@ const aboutSwiper = new Swiper(".about__swiper", {
   spaceBetween: 10,
 
   breakpoints: {
-    960: {
+    900: {
       spaceBetween: 20,
     },
   },
@@ -67,24 +70,20 @@ Spot Swiper
 ================================================ */
 const spotSwiper = new Swiper(".spot__swiper", {
   loop: true,
-  // speed: 4000,
-  // autoplay: {
-  //   delay: 0,
-  // },
   grabCursor: true,
   slidesPerView: "auto",
   spaceBetween: 16,
   // 初期表示するスライドの番号（0〜）
-  initialSlide: 1,
+  // initialSlide: 0,
   // アクティブなスライドを中央に配置する
   centeredSlides: true,
-  // breakpoints: {
-  //   960: {
-  //     spaceBetween: 20,
-  //   },
-  // },
+  breakpoints: {
+    900: {
+      spaceBetween: 32,
+      centeredSlides: false,
+    },
+  },
 
-  // Navigation arrows
   navigation: {
     nextEl: ".spot__swiper-next",
     prevEl: ".spot__swiper-prev",

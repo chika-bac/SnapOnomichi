@@ -1325,17 +1325,41 @@ spot
   background-image: url(../../images/spots-wave-sp.png);
   background-repeat: repeat-x;
   position: absolute;
+
+  @include mq(lg) {
+    background-image: url(../../images/spots-wave-pc.png);
+    height: 120px;
+  }
 }
 .spot__wave-top {
   top: -45.7px;
+
+  @include mq(lg) {
+    top: -120px;
+  }
 }
 
 .spot__wave-bottom {
   bottom: -45px;
   transform: rotate(180deg);
+
+  @include mq(lg) {
+    bottom: -119px;
+  }
 }
 
 .spot__inner {
+}
+
+.spot__top {
+  @include mq(lg) {
+    // 最小値は20px
+    padding-left: max(calc(50% - 512px), 20px);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
 }
 
 .spot__heading {
@@ -1344,9 +1368,17 @@ spot
   align-items: center;
   gap: 8px;
   justify-content: center;
+
+  @include mq(lg) {
+    flex-direction: column;
+  }
 }
 .spot__heading-icon {
   width: 28px;
+
+  @include mq(lg) {
+    width: 56px;
+  }
 }
 .spot__heading-ja {
   color: var(--color-white);
@@ -1355,10 +1387,20 @@ spot
   font-size: 28px;
   font-weight: 500;
   line-height: 1.25;
+
+  @include mq(lg) {
+    writing-mode: vertical-rl;
+    font-size: 40px;
+  }
 }
 
 .spot__content {
   margin-top: 24px;
+
+  @include mq(lg) {
+    margin-top: 0;
+    overflow: hidden;
+  }
 }
 
 /*!
@@ -1382,52 +1424,135 @@ spot swiper
   gap: 16px;
   border-radius: 12px;
   background: var(--color-white);
-  text-align: center;
   overflow: hidden;
+
+  @include mq(lg) {
+    max-width: 344px;
+    height: calc(502px + 40px);
+    gap: 24px;
+    border-radius: 24px;
+  }
 }
 
 .spot__item-img {
   & img {
     aspect-ratio: 240 / 180;
+
+    @include mq(lg) {
+      aspect-ratio: 344 / 240;
+    }
   }
 }
 
 .spot__item-content {
   padding-inline: 24px;
+
+  @include mq(lg) {
+    padding-inline: 32px;
+  }
 }
 
 .spot__item-title {
+  text-align: center;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 16px;
+
+  @include mq(lg) {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
 }
 
 .spot__item-text {
+  text-align-last: left;
+}
+
+.spot__navigation {
+  display: none;
+
+  @include mq(lg) {
+    position: absolute;
+    top: 486px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 944px;
+    width: calc(944px / 1024px * 100%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 50;
+  }
 }
 
 .spot__swiper-prev,
 .spot__swiper-next {
-  display: none;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: var(--color-yellow);
+  border-radius: 50%;
 
-  @include mq(lg) {
-    display: block;
+  &:after {
+    content: url(../../images/spot-icon-arrow.svg);
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 .spot__swiper-prev {
+  @include mq(lg) {
+  }
 }
 
 .spot__swiper-next {
+  @include mq(lg) {
+    transform: rotate(180deg);
+  }
 }
 
 .spot__bottom {
   padding-inline: 20px;
   text-align: center;
+
+  @include mq(lg) {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin-inline: auto;
+    padding-inline: 0;
+    width: calc(100% - 20px * 2);
+    max-width: 1024px;
+    align-items: center;
+    // position: relative;
+  }
+
+  @include mq(xl) {
+    align-items: flex-start;
+  }
 }
 
 .spot__logo {
   & img {
     width: 255px;
+
+    @include mq(lg) {
+      width: clamp(23.125rem, -0.313rem + 41.67vw, 30.938rem);
+    }
+  }
+}
+
+.spot__bottom-msg {
+  @include mq(lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -1435,8 +1560,25 @@ spot swiper
   font-size: 11.444px;
   color: var(--color-white);
   padding-top: 16px;
+
+  @include mq(lg) {
+    font-size: 16px;
+    padding-top: 0;
+  }
 }
 
 .spot__button {
   margin-top: 24px;
+}
+
+.spot__pawpads {
+  display: none;
+
+  @include mq(xl) {
+    display: block;
+    position: absolute;
+    left: 36px;
+    bottom: 0px;
+    width: 100px;
+  }
 }
