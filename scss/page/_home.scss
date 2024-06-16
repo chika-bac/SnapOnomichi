@@ -1701,11 +1701,11 @@ qa
   height: 26px;
   border-radius: 50%;
   position: relative;
+  margin-left: auto;
 
   @include mq(lg) {
     width: 48px;
     height: 48px;
-    margin-left: auto;
   }
 
   &::before,

@@ -2381,12 +2381,12 @@ qa
   height: 26px;
   border-radius: 50%;
   position: relative;
+  margin-left: auto;
 }
 @media screen and (min-width: 900px) {
   .qa__summary-button {
     width: 48px;
     height: 48px;
-    margin-left: auto;
   }
 }
 .qa__summary-button::before, .qa__summary-button::after {
