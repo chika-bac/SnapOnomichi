@@ -1584,3 +1584,126 @@ spot swiper
     width: 100px;
   }
 }
+
+/*!
+qa
+------------------------------
+*/
+.qa {
+  padding-top: calc(45.71px + 40px);
+  padding-bottom: 31px;
+}
+
+.qa__inner {
+  padding-inline: 20px;
+}
+
+.qa__heading {
+}
+
+.qa__icon {
+}
+
+.heading-icon {
+}
+
+.qa__heading-en {
+}
+
+.qa__heading-ja {
+  &::after {
+    width: 140px;
+  }
+}
+
+.qa__content {
+}
+
+.qa__box {
+  border-radius: 12px;
+  border: 2px solid var(--color-brown);
+  background: var(--color-white);
+  overflow: hidden;
+
+  &:nth-child(n + 2) {
+    margin-top: 12px;
+  }
+}
+
+.js-details {
+}
+
+.qa__summary {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+
+  // safari用
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.qa__summary-icon,
+.qa__answer-icon {
+  color: var(--color-main);
+  font-family: var(--font-family-josefin);
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.qa__summary-text {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.qa__summary-button {
+  background: var(--color-main);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-white);
+    width: 10px;
+    height: 2px;
+    border-radius: 20px;
+    content: "";
+  }
+
+  &::before {
+    transition: transform 0.3s;
+    transform: translate(-50%, -50%) rotate(90deg);
+
+    // QAが開いている時
+    .qa__box.is-open & {
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.qa__answer {
+  overflow: hidden;
+}
+
+.qa__answer-inner {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--color-gray);
+}
+
+.js-answer {
+}
+
+.qa__answer-text {
+}

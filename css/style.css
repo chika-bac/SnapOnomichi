@@ -2264,4 +2264,110 @@ spot swiper
     bottom: 18px;
     width: 100px;
   }
+}
+
+/*!
+qa
+------------------------------
+*/
+.qa {
+  padding-top: 85.71px;
+  padding-bottom: 31px;
+}
+
+.qa__inner {
+  padding-inline: 20px;
+}
+
+.qa__heading-ja::after {
+  width: 140px;
+}
+
+.qa__box {
+  border-radius: 12px;
+  border: 2px solid var(--color-brown);
+  background: var(--color-white);
+  overflow: hidden;
+}
+.qa__box:nth-child(n+2) {
+  margin-top: 12px;
+}
+
+.qa__summary {
+  padding: 12px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.qa__summary::-webkit-details-marker {
+  display: none;
+}
+
+.qa__summary-icon,
+.qa__answer-icon {
+  color: var(--color-main);
+  font-family: var(--font-family-josefin);
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.qa__summary-text {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.qa__summary-button {
+  background: var(--color-main);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  position: relative;
+}
+.qa__summary-button::before, .qa__summary-button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: var(--color-white);
+  width: 10px;
+  height: 2px;
+  border-radius: 20px;
+  content: "";
+}
+.qa__summary-button::before {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+}
+.qa__box.is-open .qa__summary-button::before {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.qa__answer {
+  overflow: hidden;
+}
+
+.qa__answer-inner {
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  background: var(--color-gray);
 }/*# sourceMappingURL=style.css.map */
