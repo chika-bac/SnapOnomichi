@@ -1759,3 +1759,89 @@ qa
     font-size: 16px;
   }
 }
+
+/*!
+entry
+------------------------------
+*/
+.entry {
+  margin-inline: 20px;
+}
+
+.entry__inner {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border: 8px solid var(--color-white);
+  background: rgba(255, 255, 255, 0.5);
+  padding-inline: 23px;
+}
+
+.entry__heading {
+}
+
+.entry__icon {
+}
+
+.heading-icon {
+}
+
+.entry__heading-en {
+}
+
+.entry__heading-ja {
+  &:after {
+    width: 85px;
+  }
+}
+
+.entry__content {
+}
+
+.entry__table {
+  // display: flex;
+  // flex-direction: column;
+  // gap: 12px;
+}
+
+.entry__table-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--color-dgray);
+  }
+
+  &:nth-child(n + 2) {
+    margin-top: 12px;
+  }
+}
+
+.entry__table-head {
+  font-size: 14px;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--color-main);
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+}
+
+.entry__table-data {
+  padding-bottom: 16px;
+}
+
+.entry__caution {
+}
+
+.entry__caution-list {
+  list-style-type: disc;
+}
+
+.entry__caution-item {
+}
