@@ -31,7 +31,7 @@
 }
 
 .link__border {
-  text-decoration: underline;
+  text-decoration-line: underline;
 }
 
 .font-palt {
@@ -1775,18 +1775,19 @@ entry
 
   @include mq(xl) {
     width: 1024px;
+    padding-inline: 0;
   }
 }
 
 .entry__inner {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: calc(24px - 8px);
+  padding-bottom: calc(24px - 8px);
   border: 8px solid var(--color-white);
   background: rgba(255, 255, 255, 0.5);
-  padding-inline: 23px;
+  padding-inline: 16px;
 
   @include mq(lg) {
-    padding: 40px 56px;
+    padding: 32px 48px;
   }
 }
 
@@ -1813,6 +1814,9 @@ entry
 }
 
 .entry__content {
+  @include mq(lg) {
+    padding-top: 6px;
+  }
 }
 
 .entry__table {
@@ -1825,6 +1829,7 @@ entry
 
   @include mq(lg) {
     flex-direction: row;
+    padding-bottom: 12px;
   }
 
   &:not(:last-child) {
@@ -1841,7 +1846,7 @@ entry
   font-weight: 700;
 
   @include mq(lg) {
-    width: 240px;
+    width: 233px;
     flex-shrink: 0;
     padding-left: 16px;
     font-size: 16px;
@@ -1859,11 +1864,15 @@ entry
 }
 
 .entry__table-data {
-  padding-bottom: 16px;
+  padding-bottom: 14px;
   font-size: 12px;
+  // 禁則処理（文頭に小さい文字などが来ないように）
+  line-break: strict;
 
   @include mq(lg) {
     flex: 1;
+    font-size: 16px;
+    padding-bottom: 0;
   }
 }
 
@@ -1878,16 +1887,15 @@ entry
 .entry__caution-item {
   // li要素を左寄せにする
   display: table-row;
-  margin-bottom: 0.5em;
   &:after {
     content: "";
     display: block;
-    margin-bottom: 0.5em;
   }
 
   &:before {
     content: "•";
     display: table-cell;
-    padding-right: 0.4em;
+    padding-right: 0.5em;
+    padding-left: 0.6em;
   }
 }
