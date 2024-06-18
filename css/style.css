@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --font-family-base: "Noto Serif JP", serif;
   --font-size-pc: 16px;
@@ -2196,7 +2197,6 @@ spot swiper
     margin-inline: auto;
     padding-inline: 0;
     width: calc(100% - 40px);
-    max-width: 1024px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2456,6 +2456,20 @@ entry
 .entry {
   margin-inline: 20px;
 }
+@media screen and (min-width: 900px) {
+  .entry {
+    max-width: 1096px;
+    margin-inline: auto;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-inline: 36px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .entry {
+    width: 1024px;
+  }
+}
 
 .entry__inner {
   padding-top: 24px;
@@ -2464,9 +2478,19 @@ entry
   background: rgba(255, 255, 255, 0.5);
   padding-inline: 23px;
 }
+@media screen and (min-width: 900px) {
+  .entry__inner {
+    padding: 40px 56px;
+  }
+}
 
 .entry__heading-ja:after {
   width: 85px;
+}
+@media screen and (min-width: 900px) {
+  .entry__heading-ja:after {
+    width: 128px;
+  }
 }
 
 .entry__table-row {
@@ -2479,6 +2503,14 @@ entry
           flex-direction: column;
   gap: 8px;
 }
+@media screen and (min-width: 900px) {
+  .entry__table-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .entry__table-row:not(:last-child) {
   border-bottom: 1px solid var(--color-dgray);
 }
@@ -2489,6 +2521,15 @@ entry
 .entry__table-head {
   font-size: 14px;
   font-weight: 700;
+}
+@media screen and (min-width: 900px) {
+  .entry__table-head {
+    width: 240px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    padding-left: 16px;
+    font-size: 16px;
+  }
 }
 .entry__table-head::before {
   content: "";
@@ -2502,8 +2543,31 @@ entry
 
 .entry__table-data {
   padding-bottom: 16px;
+  font-size: 12px;
+}
+@media screen and (min-width: 900px) {
+  .entry__table-data {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .entry__caution-list {
-  list-style-type: disc;
+  display: table;
+}
+
+.entry__caution-item {
+  display: table-row;
+  margin-bottom: 0.5em;
+}
+.entry__caution-item:after {
+  content: "";
+  display: block;
+  margin-bottom: 0.5em;
+}
+.entry__caution-item:before {
+  content: "•";
+  display: table-cell;
+  padding-right: 0.4em;
 }/*# sourceMappingURL=style.css.map */

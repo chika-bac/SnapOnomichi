@@ -1529,9 +1529,7 @@ spot swiper
     margin-inline: auto;
     padding-inline: 0;
     width: calc(100% - 20px * 2);
-    max-width: 1024px;
     align-items: center;
-    // position: relative;
   }
 
   @include mq(xl) {
@@ -1766,6 +1764,18 @@ entry
 */
 .entry {
   margin-inline: 20px;
+
+  @include mq(lg) {
+    max-width: calc(1024px + 36px * 2);
+    margin-inline: auto;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-inline: 36px;
+  }
+
+  @include mq(xl) {
+    width: 1024px;
+  }
 }
 
 .entry__inner {
@@ -1774,6 +1784,10 @@ entry
   border: 8px solid var(--color-white);
   background: rgba(255, 255, 255, 0.5);
   padding-inline: 23px;
+
+  @include mq(lg) {
+    padding: 40px 56px;
+  }
 }
 
 .entry__heading {
@@ -1791,6 +1805,10 @@ entry
 .entry__heading-ja {
   &:after {
     width: 85px;
+
+    @include mq(lg) {
+      width: 128px;
+    }
   }
 }
 
@@ -1798,15 +1816,16 @@ entry
 }
 
 .entry__table {
-  // display: flex;
-  // flex-direction: column;
-  // gap: 12px;
 }
 
 .entry__table-row {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @include mq(lg) {
+    flex-direction: row;
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid var(--color-dgray);
@@ -1821,6 +1840,13 @@ entry
   font-size: 14px;
   font-weight: 700;
 
+  @include mq(lg) {
+    width: 240px;
+    flex-shrink: 0;
+    padding-left: 16px;
+    font-size: 16px;
+  }
+
   &::before {
     content: "";
     display: inline-block;
@@ -1834,14 +1860,34 @@ entry
 
 .entry__table-data {
   padding-bottom: 16px;
+  font-size: 12px;
+
+  @include mq(lg) {
+    flex: 1;
+  }
 }
 
 .entry__caution {
 }
 
 .entry__caution-list {
-  list-style-type: disc;
+  // li要素を左寄せにする
+  display: table;
 }
 
 .entry__caution-item {
+  // li要素を左寄せにする
+  display: table-row;
+  margin-bottom: 0.5em;
+  &:after {
+    content: "";
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  &:before {
+    content: "•";
+    display: table-cell;
+    padding-right: 0.4em;
+  }
 }
