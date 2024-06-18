@@ -1764,6 +1764,7 @@ entry
 */
 .entry {
   margin-inline: 20px;
+  padding-bottom: 32px;
 
   @include mq(lg) {
     max-width: calc(1024px + 36px * 2);
@@ -1898,4 +1899,173 @@ entry
     padding-right: 0.5em;
     padding-left: 0.6em;
   }
+}
+
+.entry-bg {
+  & img {
+    aspect-ratio: 375 / 99;
+
+    @include mq(lg) {
+      aspect-ratio: 1512 / 400;
+    }
+  }
+}
+
+/*!
+contact
+------------------------------
+*/
+.contact {
+  background: var(--color-white);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-inline: 20px;
+}
+
+.contact__inner {
+}
+
+.contact__heading {
+}
+
+.contact__icon {
+}
+
+.heading-icon {
+}
+
+.contact__heading-en {
+}
+
+.contact__heading-ja {
+  &:after {
+    width: 120px;
+  }
+}
+
+.contact__content {
+}
+
+.contact__attention {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.contact__form {
+  margin-top: 24px;
+}
+
+.contact__fields {
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field__head {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-field__label {
+  font-size: 14px;
+}
+
+.form-field__tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  background: var(--color-red);
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.form-field__item {
+}
+
+.form-text {
+  border-radius: 8px;
+  background: var(--color-gray);
+  padding: 16px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-select {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--color-gray);
+
+  &:before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--color-main);
+    pointer-events: none;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: url(../../images/icon-select-form.svg);
+    top: 20%;
+    right: 11px;
+    pointer-events: none;
+  }
+
+  & select {
+    width: 100%;
+    padding: 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+.form-field__radios {
+}
+
+.form-radio {
+}
+
+.form-radio__input {
+}
+
+.form-radio__text {
+}
+
+.form-textarea {
+}
+
+.contact__privacy {
+  margin-top: 24px;
+}
+
+.form-checkbox {
+}
+
+.form-checkbox__input {
+}
+
+.form-checkbox__text {
+}
+
+.contact__button {
+  margin-top: 24px;
 }
