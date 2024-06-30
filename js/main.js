@@ -32,7 +32,7 @@ page topボタンを表示
 const pageTop = document.querySelector("#js-page-top");
 window.addEventListener("scroll", (e) => {
   e.preventDefault();
-  if (window.scrollY > 100) {
+  if (window.scrollY > 300) {
     pageTop.classList.add("is-show");
   } else {
     pageTop.classList.remove("is-show");

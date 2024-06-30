@@ -156,13 +156,13 @@ component > form-field
   padding-left: calc(8px + 24px - 2px);
   position: relative;
   font-size: 14px;
+  cursor: pointer;
 
   @include mq(lg) {
     font-size: 16px;
     padding-top: 16px;
     padding-bottom: 16px;
   }
-  // }
 
   // ラジオボタンの疑似要素
   &::before,
@@ -212,8 +212,6 @@ component > form-field
   }
 }
 
-
-
 .form-checkbox {
 }
 
@@ -246,6 +244,7 @@ component > form-field
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    cursor: pointer;
   }
 
   // チェックボックスの外枠

@@ -29,11 +29,6 @@ layout > header
   display: block;
   a img {
     width: 210px;
-    //     transition: opacity 0.3s;
-
-    //     &:hover {
-    //       opacity: 0.6;
-    //     }
 
     @include mq(lg) {
       width: 183px;
@@ -133,10 +128,10 @@ layout > header
   border-radius: 3px;
 }
 
-// /*!
-// layout > header > drawer
-// ------------------------------
-// */
+/*!
+layout > header > drawer
+------------------------------
+*/
 .drawer__panel {
   position: fixed;
   z-index: 50;

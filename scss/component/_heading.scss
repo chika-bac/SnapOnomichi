@@ -58,12 +58,10 @@ component > heading
     left: 50%;
     bottom: -12px;
     transform: translateX(-50%);
-    // width: 200px; // 文字数に合わせて後で調整
     height: 6px;
     background: var(--color-yellow);
 
     @include mq(lg) {
-      // width: 320px;
       height: 8px;
       bottom: -16px;
     }
