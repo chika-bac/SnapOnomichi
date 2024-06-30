@@ -683,7 +683,7 @@
             <span class="contact__heading-ja heading-ja">お問い合わせ</span>
           </h2>
           <div class="contact__content">
-            <p class="contact__attention">本キャンペーンに関するお問い合わせは<br />以下のフォームからお願いします。</p>
+            <p class="contact__attention">本キャンペーンに関するお問い合わせは<br class="hidden-pc" />以下のフォームからお願いします。</p>
             <form action="post" class="contact__form">
               <div class="contact__fields">
                 <div class="contact__field">
@@ -694,7 +694,7 @@
                       <span class="form-field__tag">必須</span>
                     </div>
                     <div class="form-field__item">
-                      <input type="text" name="your-name" id="your-name" class="form-text" />
+                      <input type="text" name="your-name" id="your-name" class="form-text" placeholder="山田太郎" />
                     </div>
                   </div>
                   <!-- email -->
@@ -704,7 +704,7 @@
                       <span class="form-field__tag">必須</span>
                     </div>
                     <div class="form-field__item">
-                      <input type="email" name="your-email" id="your-email" class="form-text" />
+                      <input type="email" name="your-email" id="your-email" class="form-text" placeholder="info@example.com" />
                     </div>
                   </div>
 
@@ -744,7 +744,7 @@
                     </div>
                   </div>
                   <!-- message -->
-                  <div class="form-field">
+                  <div class="form-field form-field-message">
                     <div class="form-field__head">
                       <label for="your-content" class="form-field__label">メッセージ</label>
                       <span class="form-field__tag">必須</span>

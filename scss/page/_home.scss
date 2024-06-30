@@ -1920,9 +1920,20 @@ contact
   padding-top: 40px;
   padding-bottom: 40px;
   padding-inline: 20px;
+  background: var(--color-white);
+
+  @include mq(lg) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-inline: 36px;
+  }
 }
 
 .contact__inner {
+  @include mq(lg) {
+    max-width: 848px;
+    margin-inline: auto;
+  }
 }
 
 .contact__heading {
@@ -1940,6 +1951,10 @@ contact
 .contact__heading-ja {
   &:after {
     width: 120px;
+
+    @include mq(lg) {
+      width: 192px;
+    }
   }
 }
 
@@ -1949,10 +1964,18 @@ contact
 .contact__attention {
   margin-top: 24px;
   text-align: center;
+
+  @include mq(lg) {
+    margin-top: 32px;
+  }
 }
 
 .contact__form {
   margin-top: 24px;
+
+  @include mq(lg) {
+    margin-top: 40px;
+  }
 }
 
 .contact__fields {
@@ -1961,13 +1984,24 @@ contact
 .contact__field {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 26px;
 }
 
 .form-field {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @include mq(lg) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+// メッセージの部分だけラベルが上揃いになるように
+.form-field-message {
+  align-items: flex-start;
+  margin-top: 3px;
 }
 
 .form-field__head {
@@ -1975,10 +2009,19 @@ contact
   display: flex;
   align-items: center;
   gap: 12px;
+
+  @include mq(lg) {
+    min-width: 180px;
+    align-items: left;
+  }
 }
 
 .form-field__label {
   font-size: 14px;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
 }
 
 .form-field__tag {
@@ -1989,10 +2032,20 @@ contact
   background: var(--color-red);
   border-radius: 4px;
   font-size: 14px;
-  padding: 4px 8px;
+  // padding: 4px 8px;
+  padding: 2px 6px;
+
+  @include mq(lg) {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
 }
 
 .form-field__item {
+  width: 100%;
+  @include mq(lg) {
+    flex: 1;
+  }
 }
 
 .form-text {
@@ -2001,6 +2054,14 @@ contact
   padding: 16px;
   font-size: 14px;
   width: 100%;
+
+  &::placeholder {
+    color: var(--color-dgray);
+  }
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
 }
 
 .form-select {
@@ -2035,6 +2096,10 @@ contact
     padding: 16px;
     font-size: 14px;
     cursor: pointer;
+
+    @include mq(lg) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -2044,6 +2109,10 @@ contact
 }
 
 .form-radio {
+  @include mq(lg) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
 }
 
 .form-radio__input {
@@ -2066,9 +2135,17 @@ contact
 }
 
 .form-radio__text {
-  padding-left: calc(8px + 24px);
+  // 2px: 円のボーダー分
+  padding-left: calc(8px + 24px - 2px);
   position: relative;
   font-size: 14px;
+
+  @include mq(lg) {
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  // }
 
   // ラジオボタンの疑似要素
   &::before,
@@ -2109,6 +2186,10 @@ contact
   padding: 16px;
   font-size: 14px;
 
+  @include mq(lg) {
+    font-size: 16px;
+  }
+
   &::placeholder {
     color: var(--color-dgray);
   }
@@ -2118,6 +2199,11 @@ contact
   margin-top: 24px;
   font-size: 14px;
   text-align: center;
+
+  @include mq(lg) {
+    margin-top: 40px;
+    font-size: 16px;
+  }
 }
 
 .form-checkbox {
@@ -2165,7 +2251,7 @@ contact
   // チェックマーク
   &::after {
     left: 5px;
-    top: 3px;
+    top: 4px;
     width: 15px;
     height: 10px;
     border-left: 3px solid var(--color-main);
@@ -2178,4 +2264,15 @@ contact
 .contact__button {
   margin-top: 24px;
   text-align: center;
+
+  @include mq(lg) {
+    margin-top: 40px;
+  }
+
+  & input {
+    @include mq(lg) {
+      padding: 6px 38px 6px 38px;
+      font-size: 16px;
+    }
+  }
 }

@@ -2601,19 +2601,49 @@ contact
   padding-top: 40px;
   padding-bottom: 40px;
   padding-inline: 20px;
+  background: var(--color-white);
+}
+@media screen and (min-width: 900px) {
+  .contact {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-inline: 36px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contact__inner {
+    max-width: 848px;
+    margin-inline: auto;
+  }
 }
 
 .contact__heading-ja:after {
   width: 120px;
+}
+@media screen and (min-width: 900px) {
+  .contact__heading-ja:after {
+    width: 192px;
+  }
 }
 
 .contact__attention {
   margin-top: 24px;
   text-align: center;
 }
+@media screen and (min-width: 900px) {
+  .contact__attention {
+    margin-top: 32px;
+  }
+}
 
 .contact__form {
   margin-top: 24px;
+}
+@media screen and (min-width: 900px) {
+  .contact__form {
+    margin-top: 40px;
+  }
 }
 
 .contact__field {
@@ -2624,7 +2654,7 @@ contact
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
+  gap: 26px;
 }
 
 .form-field {
@@ -2637,6 +2667,22 @@ contact
           flex-direction: column;
   gap: 8px;
 }
+@media screen and (min-width: 900px) {
+  .form-field {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.form-field-message {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 3px;
+}
 
 .form-field__head {
   font-weight: 700;
@@ -2648,9 +2694,22 @@ contact
           align-items: center;
   gap: 12px;
 }
+@media screen and (min-width: 900px) {
+  .form-field__head {
+    min-width: 180px;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+  }
+}
 
 .form-field__label {
   font-size: 14px;
+}
+@media screen and (min-width: 900px) {
+  .form-field__label {
+    font-size: 16px;
+  }
 }
 
 .form-field__tag {
@@ -2667,7 +2726,24 @@ contact
   background: var(--color-red);
   border-radius: 4px;
   font-size: 14px;
-  padding: 4px 8px;
+  padding: 2px 6px;
+}
+@media screen and (min-width: 900px) {
+  .form-field__tag {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+}
+
+.form-field__item {
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .form-field__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .form-text {
@@ -2676,6 +2752,26 @@ contact
   padding: 16px;
   font-size: 14px;
   width: 100%;
+}
+.form-text::-webkit-input-placeholder {
+  color: var(--color-dgray);
+}
+.form-text::-moz-placeholder {
+  color: var(--color-dgray);
+}
+.form-text:-ms-input-placeholder {
+  color: var(--color-dgray);
+}
+.form-text::-ms-input-placeholder {
+  color: var(--color-dgray);
+}
+.form-text::placeholder {
+  color: var(--color-dgray);
+}
+@media screen and (min-width: 900px) {
+  .form-text {
+    font-size: 16px;
+  }
 }
 
 .form-select {
@@ -2709,12 +2805,24 @@ contact
   font-size: 14px;
   cursor: pointer;
 }
+@media screen and (min-width: 900px) {
+  .form-select select {
+    font-size: 16px;
+  }
+}
 
 .form-field__radios {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 24px;
+}
+
+@media screen and (min-width: 900px) {
+  .form-radio {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
 }
 
 .form-radio__input:checked + .form-radio__text {
@@ -2728,9 +2836,16 @@ contact
 }
 
 .form-radio__text {
-  padding-left: 32px;
+  padding-left: 30px;
   position: relative;
   font-size: 14px;
+}
+@media screen and (min-width: 900px) {
+  .form-radio__text {
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 .form-radio__text::before, .form-radio__text::after {
   content: "";
@@ -2767,6 +2882,11 @@ contact
   padding: 16px;
   font-size: 14px;
 }
+@media screen and (min-width: 900px) {
+  .form-textarea {
+    font-size: 16px;
+  }
+}
 .form-textarea::-webkit-input-placeholder {
   color: var(--color-dgray);
 }
@@ -2787,6 +2907,12 @@ contact
   margin-top: 24px;
   font-size: 14px;
   text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .contact__privacy {
+    margin-top: 40px;
+    font-size: 16px;
+  }
 }
 
 .form-checkbox__input:checked + .form-checkbox__text:after {
@@ -2817,7 +2943,7 @@ contact
 }
 .form-checkbox__text::after {
   left: 5px;
-  top: 3px;
+  top: 4px;
   width: 15px;
   height: 10px;
   border-left: 3px solid var(--color-main);
@@ -2830,4 +2956,15 @@ contact
 .contact__button {
   margin-top: 24px;
   text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .contact__button {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .contact__button input {
+    padding: 6px 38px 6px 38px;
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
