@@ -27,6 +27,19 @@ document.querySelectorAll('#js-drawer-panel a[href^="#"]').forEach((link) => {
 });
 
 /*
+page topボタンを表示
+================================================ */
+const pageTop = document.querySelector("#js-page-top");
+window.addEventListener("scroll", (e) => {
+  e.preventDefault();
+  if (window.scrollY > 100) {
+    pageTop.classList.add("is-show");
+  } else {
+    pageTop.classList.remove("is-show");
+  }
+});
+
+/*
 About Swiper
 ================================================ */
 const aboutSwiper = new Swiper(".about__swiper", {

@@ -2022,6 +2022,10 @@ footer
   padding-top: 40px;
   margin-inline: auto;
   position: relative;
+
+  @include mq(lg) {
+    padding-top: 120px;
+  }
 }
 
 .footer__inner {
@@ -2036,6 +2040,10 @@ footer
   font-family: var(--font-family-josefin);
   font-size: 20px;
   line-height: 1.25;
+
+  @include mq(lg) {
+    font-size: 24px;
+  }
 }
 
 .footer__sns {
@@ -2049,11 +2057,24 @@ footer
 .footer__sns-link {
   & img {
     width: 32px;
+
+    @include mq(lg) {
+      width: 40px;
+    }
   }
 }
 
 .footer__bg-image {
   margin-top: 9px;
+  text-align: center;
+
+  @include mq(lg) {
+    margin-top: 42px;
+
+    & img {
+      max-width: 755px;
+    }
+  }
 }
 
 .footer__access {
@@ -2061,43 +2082,81 @@ footer
   border-radius: 16px;
   overflow: hidden;
   background: var(--color-white);
+
+  @include mq(lg) {
+    max-width: 1024px;
+    margin-inline: auto;
+  }
 }
 
 .footer__access-inner {
+  @include mq(lg) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .footer__access-map {
+  @include mq(lg) {
+    width: 50%;
+  }
   & iframe {
     width: 100%;
     height: 271px;
+
+    @include mq(lg) {
+      height: 400px;
+    }
   }
 }
 
 .footer__access-address {
   padding: 24px;
+
+  @include mq(lg) {
+    width: 50%;
+    padding-top: 106px;
+    padding-left: 62px;
+  }
 }
 
 .footer__logo {
   text-align: center;
   margin-bottom: 24px;
+
+  @include mq(lg) {
+    text-align: left;
+  }
   & img {
     width: 153px;
     height: 20px;
+
+    @include mq(lg) {
+      width: 183px;
+      height: 24px;
+    }
   }
 }
 
 .footer__address {
   margin-top: 6px;
-  // margin-bottom: 6px;
 }
 
 .footer__address-tr {
   font-size: 12px;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
 }
 
 .footer__address-th {
   font-weight: 700;
   width: 80px;
+
+  @include mq(lg) {
+    width: 120px;
+  }
 
   &::before {
     content: "";
@@ -2112,6 +2171,23 @@ footer
 
 .footer__address-td {
   height: calc(19px + 8px);
+
+  @include mq(lg) {
+    height: calc(23px + 12px);
+  }
+}
+
+.footer__pawpads {
+  display: none;
+
+  @include mq(xl) {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 220px;
+    right: 80px;
+    top: 80px;
+  }
 }
 
 .footer__bottom {
@@ -2120,6 +2196,11 @@ footer
   text-align: center;
   padding-bottom: 24px;
   position: relative;
+
+  @include mq(lg) {
+    margin-top: 240px;
+    padding-bottom: 32px;
+  }
 }
 
 .footer__bottom-wave {
@@ -2129,25 +2210,46 @@ footer
   background-image: url(../../images/spots-wave-sp.png);
   background-repeat: repeat-x;
   position: absolute;
+
+  @include mq(lg) {
+    top: -118px;
+    height: 120px;
+    background-image: url(../../images/spots-wave-pc.png);
+  }
 }
 
 .footer__copy {
   color: var(--color-white);
   font-size: 10px;
+
+  @include mq(lg) {
+    font-size: 14px;
+  }
 }
 
 .page-top {
   position: absolute;
   bottom: 110px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
+  width: min(calc(75px / 375px * 100%), 100px);
 
-  & img {
-    width: 75px;
+  @include mq(lg) {
+    position: fixed;
+    right: 20px;
+    transform: translateX(0);
+    bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
   }
-}
 
-.js-page-top {
+  &.is-show {
+    @include mq(lg) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
 .page-top__link {
