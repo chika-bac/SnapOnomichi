@@ -2710,10 +2710,124 @@ contact
   cursor: pointer;
 }
 
+.form-field__radios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+
+.form-radio__input:checked + .form-radio__text {
+  font-weight: 700;
+}
+.form-radio__input:checked + .form-radio__text:after {
+  opacity: 1;
+}
+.form-radio__input:focus + .form-radio__text::before {
+  outline: var(--color-main) auto;
+}
+
+.form-radio__text {
+  padding-left: 32px;
+  position: relative;
+  font-size: 14px;
+}
+.form-radio__text::before, .form-radio__text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+}
+.form-radio__text:before {
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-gray);
+  left: 0;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.form-radio__text:after {
+  width: 14px;
+  height: 14px;
+  background: var(--color-main);
+  left: 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  background: var(--color-gray);
+  padding: 16px;
+  font-size: 14px;
+}
+.form-textarea::-webkit-input-placeholder {
+  color: var(--color-dgray);
+}
+.form-textarea::-moz-placeholder {
+  color: var(--color-dgray);
+}
+.form-textarea:-ms-input-placeholder {
+  color: var(--color-dgray);
+}
+.form-textarea::-ms-input-placeholder {
+  color: var(--color-dgray);
+}
+.form-textarea::placeholder {
+  color: var(--color-dgray);
+}
+
 .contact__privacy {
   margin-top: 24px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.form-checkbox__input:checked + .form-checkbox__text:after {
+  opacity: 1;
+}
+.form-checkbox__input:focus + .form-checkbox__text::before {
+  outline: var(--color-main) auto 1px;
+}
+
+.form-checkbox__text {
+  position: relative;
+  padding-left: 36px;
+}
+.form-checkbox__text::before, .form-checkbox__text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.form-checkbox__text::before {
+  width: 24px;
+  height: 24px;
+  background: var(--color-gray);
+  border-radius: 4px;
+}
+.form-checkbox__text::after {
+  left: 5px;
+  top: 3px;
+  width: 15px;
+  height: 10px;
+  border-left: 3px solid var(--color-main);
+  border-bottom: 3px solid var(--color-main);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  opacity: 0;
 }
 
 .contact__button {
   margin-top: 24px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
