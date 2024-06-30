@@ -94,8 +94,8 @@ fv
   position: relative;
 }
 
-.fv__image-top {
-}
+// .fv__image-top {
+// }
 
 .fv__image-top-fukidashi {
   position: absolute;
@@ -138,11 +138,11 @@ fv
   }
 }
 
-.fv__image-middle-img {
-}
+// .fv__image-middle-img {
+// }
 
-.fv__image-bottom {
-}
+// .fv__image-bottom {
+// }
 .fv__image-bottom-food {
   position: absolute;
   top: 396px;
@@ -210,8 +210,8 @@ about
   }
 }
 
-.about__img {
-}
+// .about__img {
+// }
 
 .about__top-left {
   position: absolute;
@@ -260,8 +260,8 @@ about
   }
 }
 
-.about__heading-en {
-}
+// .about__heading-en {
+// }
 
 .about__heading-ja {
   &::after {
@@ -323,8 +323,8 @@ about
   }
 }
 
-.about__button {
-}
+// .about__button {
+// }
 
 .about__bg-arrow {
   position: absolute;
@@ -371,9 +371,6 @@ about
   width: 200px;
   height: 200px;
   border-radius: 24px;
-
-  @include mq(md) {
-  }
 
   @include mq(lg) {
     width: 480px;
@@ -468,9 +465,6 @@ about
   right: 57px;
   width: 133px;
 
-  @include mq(md) {
-  }
-
   @include mq(lg) {
     width: 258px;
     top: 997px;
@@ -509,9 +503,6 @@ slider
   }
 }
 
-.swiper {
-}
-
 .about__swiper {
   @include mq(xl) {
     margin-top: -8px;
@@ -520,9 +511,6 @@ slider
 
 .about__swiper-wrapper {
   transition-timing-function: linear;
-}
-
-.swiper-slide {
 }
 
 .about__swiper-item {
@@ -561,14 +549,14 @@ Step how to enter
   }
 }
 
-.step__heading {
-}
+// .step__heading {
+// }
 
-.step__icon {
-}
+// .step__icon {
+// }
 
-.step__heading-en {
-}
+// .step__heading-en {
+// }
 
 .step__heading-ja {
   &::after {
@@ -820,8 +808,8 @@ Step how to enter
   }
 }
 
-.step__bg-right {
-}
+// .step__bg-right {
+// }
 
 .step__top-cat1 {
   position: absolute;
@@ -864,8 +852,8 @@ Step how to enter
   }
 }
 
-.step__bg-pawpads {
-}
+// .step__bg-pawpads {
+// }
 
 .step__bg-pawpads-top {
   position: absolute;
@@ -1016,11 +1004,11 @@ prize
   }
 }
 
-.prize__icon {
-}
+// .prize__icon {
+// }
 
-.prize__heading-en {
-}
+// .prize__heading-en {
+// }
 
 .prize__heading-ja {
   &::after {
@@ -1242,11 +1230,11 @@ prize
   }
 }
 
-.prize__dialog-inner {
-}
+// .prize__dialog-inner {
+// }
 
-.prize__dialog-img {
-}
+// .prize__dialog-img {
+// }
 
 .prize__dialog-content {
   margin-top: 39px;
@@ -1269,8 +1257,8 @@ prize
   }
 }
 
-.prize__dialog-text {
-}
+// .prize__dialog-text {
+// }
 
 .prize__dialog-close {
   margin-top: 16px;
@@ -1350,8 +1338,8 @@ spot
   }
 }
 
-.spot__inner {
-}
+// .spot__inner {
+// }
 
 .spot__top {
   @include mq(lg) {
@@ -1411,15 +1399,12 @@ spot
 spot swiper
 ------------------------------
 */
+// .spot__swiper {
+// }
 
-// .swiper
-.spot__swiper {
-}
+// .swiper-wrapper {
+// }
 
-.swiper-wrapper {
-}
-
-// .swiper-slide
 .spot__item {
   max-width: 240px;
   height: calc(371px + 31.2px);
@@ -1609,17 +1594,17 @@ qa
   }
 }
 
-.qa__heading {
-}
+// .qa__heading {
+// }
 
-.qa__icon {
-}
+// .qa__icon {
+// }
 
-.heading-icon {
-}
+// .heading-icon {
+// }
 
-.qa__heading-en {
-}
+// .qa__heading-en {
+// }
 
 .qa__heading-ja {
   &::after {
@@ -1795,17 +1780,17 @@ entry
   }
 }
 
-.entry__heading {
-}
+// .entry__heading {
+// }
 
-.entry__icon {
-}
+// .entry__icon {
+// }
 
-.heading-icon {
-}
+// .heading-icon {
+// }
 
-.entry__heading-en {
-}
+// .entry__heading-en {
+// }
 
 .entry__heading-ja {
   &:after {
@@ -1823,8 +1808,8 @@ entry
   }
 }
 
-.entry__table {
-}
+// .entry__table {
+// }
 
 .entry__table-row {
   display: flex;
@@ -1880,8 +1865,8 @@ entry
   }
 }
 
-.entry__caution {
-}
+// .entry__caution {
+// }
 
 .entry__caution-list {
   // li要素を左寄せにする
@@ -1939,17 +1924,17 @@ contact
   }
 }
 
-.contact__heading {
-}
+// .contact__heading {
+// }
 
-.contact__icon {
-}
+// .contact__icon {
+// }
 
-.heading-icon {
-}
+// .heading-icon {
+// }
 
-.contact__heading-en {
-}
+// .contact__heading-en {
+// }
 
 .contact__heading-ja {
   &:after {
@@ -1961,8 +1946,8 @@ contact
   }
 }
 
-.contact__content {
-}
+// .contact__content {
+// }
 
 .contact__attention {
   margin-top: 24px;
@@ -1981,8 +1966,8 @@ contact
   }
 }
 
-.contact__fields {
-}
+// .contact__fields {
+// }
 
 .contact__field {
   display: flex;
@@ -2004,7 +1989,6 @@ contact
 .contact__button {
   margin-top: 24px;
   text-align: center;
-
 
   @include mq(lg) {
     margin-top: 40px;

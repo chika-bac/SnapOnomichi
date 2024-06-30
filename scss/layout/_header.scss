@@ -106,7 +106,6 @@ layout > header
   transition: all 0.3s linear;
 
   &:nth-of-type(1) {
-    // top: 2px;
     width: 25.6px;
   }
 
@@ -147,8 +146,8 @@ layout > header > drawer
   }
 }
 
-.drawer__nav {
-}
+// .drawer__nav {
+// }
 
 .drawer__nav-list {
   display: flex;
@@ -157,8 +156,8 @@ layout > header > drawer
   gap: 40px;
 }
 
-.drawer__nav-item {
-}
+// .drawer__nav-item {
+// }
 
 .drawer__link {
   text-align: center;
