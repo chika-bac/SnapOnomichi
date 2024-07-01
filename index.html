@@ -671,7 +671,7 @@
           </h2>
           <div class="contact__content">
             <p class="contact__attention">本キャンペーンに関するお問い合わせは<br class="hidden-pc" />以下のフォームからお願いします。</p>
-            <form action="post" class="contact__form">
+            <form action="" id="js-form" class="contact__form">
               <div class="contact__fields">
                 <div class="contact__field">
                   <!-- name -->
@@ -681,7 +681,7 @@
                       <span class="form-field__tag">必須</span>
                     </div>
                     <div class="form-field__item">
-                      <input type="text" name="your-name" id="your-name" class="form-text" placeholder="山田太郎" />
+                      <input type="text" name="your-name" id="your-name" class="form-text js-input" placeholder="山田太郎" required />
                     </div>
                   </div>
                   <!-- email -->
@@ -691,7 +691,7 @@
                       <span class="form-field__tag">必須</span>
                     </div>
                     <div class="form-field__item">
-                      <input type="email" name="your-email" id="your-email" class="form-text" placeholder="info@example.com" />
+                      <input type="email" name="your-email" id="your-email" class="form-text js-input" placeholder="info@example.com" required />
                     </div>
                   </div>
 
@@ -702,14 +702,12 @@
                       <span class="form-field__tag">必須</span>
                     </div>
                     <div class="form-field__item">
-                      <div class="form-select">
-                        <select name="your-content" id="your-content">
-                          <option value="">選択してください</option>
-                          <option value="1">選択項目1</option>
-                          <option value="2">選択項目2</option>
-                          <option value="3">選択項目3</option>
-                        </select>
-                      </div>
+                      <select name="your-content" id="your-content" required class="form-select js-input">
+                        <option value="" hidden>選択してください</option>
+                        <option value="1">選択項目1</option>
+                        <option value="2">選択項目2</option>
+                        <option value="3">選択項目3</option>
+                      </select>
                     </div>
                   </div>
                   <!-- mail magazine -->
@@ -737,7 +735,7 @@
                       <span class="form-field__tag">必須</span>
                     </div>
                     <div class="form-field__item">
-                      <textarea name="your-message" id="your-message" class="form-textarea" placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。" aria-label="メッセージ記入欄"></textarea>
+                      <textarea name="your-message" id="your-message" class="form-textarea js-input" placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。" aria-label="メッセージ記入欄" required></textarea>
                     </div>
                   </div>
                 </div>
@@ -746,7 +744,7 @@
                 <!-- privacy -->
                 <div class="contact__privacy">
                   <label class="form-checkbox">
-                    <input type="checkbox" name="form-checkbox" id="form-checkbox" class="form-checkbox__input" />
+                    <input type="checkbox" name="form-checkbox" id="form-checkbox" class="form-checkbox__input" required />
                     <span class="form-checkbox__text"> <a href="" target="_blank" class="link__border">プライバシーポリシー</a>に合意する </span>
                   </label>
                 </div>

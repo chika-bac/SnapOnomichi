@@ -4,6 +4,13 @@
 component > form-field
 ------------------------------
 */
+input,
+textarea,
+select {
+  outline: none;
+  border: 1px solid transparent;
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -36,6 +43,10 @@ component > form-field
 .form-field__label {
   font-size: 14px;
 
+  &.is-error {
+    color: var(--color-red);
+  }
+
   @include mq(lg) {
     font-size: 16px;
   }
@@ -49,7 +60,6 @@ component > form-field
   background: var(--color-red);
   border-radius: 4px;
   font-size: 14px;
-  // padding: 4px 8px;
   padding: 2px 6px;
 
   @include mq(lg) {
@@ -76,6 +86,16 @@ component > form-field
     color: var(--color-dgray);
   }
 
+  &:focus {
+    background: var(--color-sub-lblue);
+    border-color: var(--color-main);
+  }
+
+  &.is-error {
+    border-color: var(--color-red);
+    background: #fff0f7;
+  }
+
   @include mq(lg) {
     font-size: 16px;
   }
@@ -83,40 +103,29 @@ component > form-field
 
 .form-select {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 56px;
+  padding: 14.5px 15px;
+  font-size: 14px;
+  appearance: none;
+  cursor: pointer;
+  background-image: url(../../images/icon-select-arrow.svg), linear-gradient(to left, #9ed0e0 52px, #f5f5f5 52px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center right 11px, center center;
+  border: 1px solid transparent;
   border-radius: 8px;
-  background: var(--color-gray);
 
-  &:before {
-    content: "";
-    display: block;
-    width: 52px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--color-main);
-    pointer-events: none;
+  &:focus {
+    border-color: var(--color-main);
   }
 
-  &::after {
-    position: absolute;
-    display: block;
-    content: url(../../images/icon-select-form.svg);
-    top: 20%;
-    right: 11px;
-    pointer-events: none;
+  &.is-error {
+    background-image: url(../../images/icon-select-arrow.svg), linear-gradient(to left, #ce2073 52px, #fff0f7 52px);
+    border-color: #ce2073;
   }
 
-  & select {
-    width: 100%;
-    padding: 16px;
-    font-size: 14px;
-    cursor: pointer;
-
-    @include mq(lg) {
-      font-size: 16px;
-    }
+  @include mq(lg) {
+    font-size: 16px;
   }
 }
 
@@ -146,7 +155,7 @@ component > form-field
   &:focus + .form-radio__text {
     // ラジオボタンにフォーカスした時の外枠
     &::before {
-      outline: var(--color-main) auto;
+      border-color: var(--color-main);
     }
   }
 }
@@ -181,15 +190,15 @@ component > form-field
     height: 24px;
     background-color: var(--color-gray);
     left: 0;
-    transition: border-color 0.3s;
+    border: 1px solid transparent;
   }
 
   // ラジオボタンの中の丸
   &:after {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     background: var(--color-main);
-    left: 5px;
+    left: 6px;
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -207,8 +216,18 @@ component > form-field
     font-size: 16px;
   }
 
+  &:focus {
+    background: var(--color-sub-lblue);
+    border-color: var(--color-main);
+  }
+
   &::placeholder {
     color: var(--color-dgray);
+  }
+
+  &.is-error {
+    border-color: var(--color-red);
+    background: #fff0f7;
   }
 }
 
@@ -216,6 +235,14 @@ component > form-field
 // }
 
 .form-checkbox__input {
+  // フォームバリデーションを有効にするため
+  appearance: auto;
+
+  // デフォルトcheckboxを非表示に
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
   &:checked {
     + .form-checkbox__text {
       &:after {
@@ -227,7 +254,14 @@ component > form-field
   &:focus + .form-checkbox__text {
     // チェックした時の外枠
     &::before {
-      outline: var(--color-main) auto 1px;
+      border-color: var(--color-main);
+    }
+  }
+
+  &.is-error + .form-checkbox__text {
+    &::before {
+      border-color: var(--color-red);
+      background: #fff0f7;
     }
   }
 }
@@ -253,16 +287,17 @@ component > form-field
     height: 24px;
     background: var(--color-gray);
     border-radius: 4px;
+    border: 1px solid transparent;
   }
 
   // チェックマーク
   &::after {
     left: 5px;
-    top: 4px;
+    top: 3px;
     width: 15px;
     height: 10px;
-    border-left: 3px solid var(--color-main);
-    border-bottom: 3px solid var(--color-main);
+    border-left: 2px solid var(--color-main);
+    border-bottom: 2px solid var(--color-main);
     transform: rotate(-45deg);
     opacity: 0;
   }

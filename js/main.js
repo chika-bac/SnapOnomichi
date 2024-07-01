@@ -179,3 +179,59 @@ const openingAnimKeyframes = (content) => [
     opacity: 1,
   },
 ];
+
+/*
+フォームバリデーション
+================================================ */
+const form = document.querySelector("#js-form");
+const inputs = form.querySelectorAll(".js-input");
+const checkBox = form.querySelector("#form-checkbox");
+
+// 入力時の処理
+const handleInput = (e) => {
+  e.preventDefault();
+  const inputElement = e.target;
+  const formFieldHead = inputElement.closest(".form-field").querySelector(".form-field__head");
+  const label = formFieldHead.querySelector(".form-field__label");
+
+  if (inputElement.classList.contains("is-error")) {
+    label.classList.remove("is-error");
+    inputElement.classList.remove("is-error");
+  }
+};
+
+// バリデーションエラー時の処理
+const handleInvalid = (e) => {
+  const inputElement = e.target;
+  const formFieldHead = inputElement.closest(".form-field").querySelector(".form-field__head");
+  const label = formFieldHead.querySelector(".form-field__label");
+
+  if (label) {
+    label.classList.add("is-error");
+  }
+  inputElement.classList.add("is-error");
+
+  // プライバシーポリシー
+  if (!checkBox.checked) {
+    checkBox.classList.add("is-error");
+  }
+};
+
+inputs.forEach((input) => {
+  input.addEventListener("input", handleInput);
+  input.addEventListener("invalid", handleInvalid);
+});
+
+form.addEventListener("submit", (e) => {
+  if (form.checkValidity()) {
+    alert("送信が完了しました");
+  }
+});
+
+// プライバシーポリシーのチェックボックスにチェックされたらクラスを削除
+checkBox.addEventListener("change", (e) => {
+  e.preventDefault();
+  if (checkBox.checked) {
+    checkBox.classList.remove("is-error");
+  }
+});

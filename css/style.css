@@ -348,6 +348,13 @@ component > heading
 component > form-field
 ------------------------------
 */
+input,
+textarea,
+select {
+  outline: none;
+  border: 1px solid transparent;
+}
+
 .form-field {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,6 +403,9 @@ component > form-field
 
 .form-field__label {
   font-size: 14px;
+}
+.form-field__label.is-error {
+  color: var(--color-red);
 }
 @media screen and (min-width: 900px) {
   .form-field__label {
@@ -459,6 +469,14 @@ component > form-field
 .form-text::placeholder {
   color: var(--color-dgray);
 }
+.form-text:focus {
+  background: var(--color-sub-lblue);
+  border-color: var(--color-main);
+}
+.form-text.is-error {
+  border-color: var(--color-red);
+  background: #fff0f7;
+}
 @media screen and (min-width: 900px) {
   .form-text {
     font-size: 16px;
@@ -467,37 +485,29 @@ component > form-field
 
 .form-select {
   position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  background: var(--color-gray);
-}
-.form-select:before {
-  content: "";
-  display: block;
-  width: 52px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: var(--color-main);
-  pointer-events: none;
-}
-.form-select::after {
-  position: absolute;
-  display: block;
-  content: url(../../images/icon-select-form.svg);
-  top: 20%;
-  right: 11px;
-  pointer-events: none;
-}
-.form-select select {
   width: 100%;
-  padding: 16px;
+  height: 56px;
+  padding: 14.5px 15px;
   font-size: 14px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
+  background-image: url(../../images/icon-select-arrow.svg), linear-gradient(to left, #9ed0e0 52px, #f5f5f5 52px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center right 11px, center center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+.form-select:focus {
+  border-color: var(--color-main);
+}
+.form-select.is-error {
+  background-image: url(../../images/icon-select-arrow.svg), linear-gradient(to left, #ce2073 52px, #fff0f7 52px);
+  border-color: #ce2073;
 }
 @media screen and (min-width: 900px) {
-  .form-select select {
+  .form-select {
     font-size: 16px;
   }
 }
@@ -523,7 +533,7 @@ component > form-field
   opacity: 1;
 }
 .form-radio__input:focus + .form-radio__text::before {
-  outline: var(--color-main) auto;
+  border-color: var(--color-main);
 }
 
 .form-radio__text {
@@ -553,14 +563,13 @@ component > form-field
   height: 24px;
   background-color: var(--color-gray);
   left: 0;
-  -webkit-transition: border-color 0.3s;
-  transition: border-color 0.3s;
+  border: 1px solid transparent;
 }
 .form-radio__text:after {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   background: var(--color-main);
-  left: 5px;
+  left: 6px;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -579,6 +588,10 @@ component > form-field
     font-size: 16px;
   }
 }
+.form-textarea:focus {
+  background: var(--color-sub-lblue);
+  border-color: var(--color-main);
+}
 .form-textarea::-webkit-input-placeholder {
   color: var(--color-dgray);
 }
@@ -594,12 +607,29 @@ component > form-field
 .form-textarea::placeholder {
   color: var(--color-dgray);
 }
+.form-textarea.is-error {
+  border-color: var(--color-red);
+  background: #fff0f7;
+}
 
+.form-checkbox__input {
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
 .form-checkbox__input:checked + .form-checkbox__text:after {
   opacity: 1;
 }
 .form-checkbox__input:focus + .form-checkbox__text::before {
-  outline: var(--color-main) auto 1px;
+  border-color: var(--color-main);
+}
+.form-checkbox__input.is-error + .form-checkbox__text::before {
+  border-color: var(--color-red);
+  background: #fff0f7;
 }
 
 .form-checkbox__text {
@@ -621,14 +651,15 @@ component > form-field
   height: 24px;
   background: var(--color-gray);
   border-radius: 4px;
+  border: 1px solid transparent;
 }
 .form-checkbox__text::after {
   left: 5px;
-  top: 4px;
+  top: 3px;
   width: 15px;
   height: 10px;
-  border-left: 3px solid var(--color-main);
-  border-bottom: 3px solid var(--color-main);
+  border-left: 2px solid var(--color-main);
+  border-bottom: 2px solid var(--color-main);
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   opacity: 0;
