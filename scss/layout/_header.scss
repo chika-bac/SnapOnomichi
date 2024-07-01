@@ -52,11 +52,12 @@ layout > header
 
 .header__nav-link {
   font-size: 12px;
-  //   transition: color 0.3s;
+    transition: color 0.3s, text-decoration 0.3s;
 
-  //   &:hover {
-  //     color: var(--color-main);
-  //   }
+    &:hover {
+      color: var(--color-sub-dblue);
+      text-decoration: underline;
+    }
 }
 
 .header__nav-button {

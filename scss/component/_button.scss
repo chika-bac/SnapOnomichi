@@ -19,11 +19,10 @@ component > button
   align-items: center;
   flex-shrink: 0;
 
-  // &:hover {
-  //   cursor: pointer;
-  //   background-color: var(--color-main);
-  //   color: var(--color-base);
-  // }
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-yellow);
+  }
 }
 
 .button-lg {

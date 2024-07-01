@@ -245,6 +245,10 @@ component > button
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+.button:hover {
+  cursor: pointer;
+  background-color: var(--color-yellow);
+}
 
 .button-lg {
   padding: 8px 38px 10px 38px;
@@ -732,6 +736,14 @@ layout > header
 
 .header__nav-link {
   font-size: 12px;
+  -webkit-transition: color 0.3s, -webkit-text-decoration 0.3s;
+  transition: color 0.3s, -webkit-text-decoration 0.3s;
+  transition: color 0.3s, text-decoration 0.3s;
+  transition: color 0.3s, text-decoration 0.3s, -webkit-text-decoration 0.3s;
+}
+.header__nav-link:hover {
+  color: var(--color-sub-dblue);
+  text-decoration: underline;
 }
 
 .header__nav-button {
@@ -1111,7 +1123,12 @@ layout > footer
 
 .link__border {
   text-decoration-line: underline;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.link__border:hover {
   cursor: pointer;
+  color: var(--color-sub-dblue);
 }
 
 .font-palt {
@@ -2269,6 +2286,7 @@ prize
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 48px;
+  z-index: 10;
 }
 @media screen and (min-width: 900px) {
   .prize__item:nth-child(1) .prize__item-number, .prize__item:nth-child(2) .prize__item-number {
