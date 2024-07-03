@@ -1,9 +1,21 @@
-// 画面はみ出しチェック
-// document.querySelectorAll("*").forEach((el) => (el.clientWidth > document.body.clientWidth ? console.log(el) : console.log("ないよ")));
+/*
+360pxでviewport固定
+================================================ */
+!(function () {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  function switchViewport() {
+    const value = window.outerWidth > 360 ? "width=device-width,initial-scale=1" : "width=360";
+    if (viewport.getAttribute("content") !== value) {
+      viewport.setAttribute("content", value);
+    }
+  }
+  addEventListener("resize", switchViewport, false);
+  switchViewport();
+})();
 
-// /*
-// スライドメニュー
-// ================================================ */
+/*
+スライドメニュー
+================================================ */
 const menuIcon = document.querySelector("#js-drawer-icon");
 const menuPanel = document.querySelector("#js-drawer-panel");
 
@@ -58,9 +70,9 @@ const aboutSwiper = new Swiper(".about__swiper", {
   },
 });
 
-// /*
-// モーダル
-// ================================================ */
+/*
+モーダル
+================================================ */
 const openButtons = document.querySelectorAll(".js-dialog-open");
 const closeButtons = document.querySelectorAll(".js-dialog-close");
 

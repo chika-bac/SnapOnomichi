@@ -770,7 +770,8 @@ Step how to enter
 
 .step__button {
   margin-top: 16px;
-  text-align: center;
+  display: grid;
+  place-content: center;
 
   @include mq(lg) {
     margin-top: 50px;
@@ -1233,8 +1234,9 @@ prize
 }
 
 .prize__button {
-  text-align: center;
   margin-top: 18px;
+  display: grid;
+  place-content: center;
 
   @include mq(lg) {
     margin-top: 40px;
@@ -1584,6 +1586,8 @@ spot swiper
 
 .spot__button {
   margin-top: 24px;
+  display: grid;
+  place-content: center;
 }
 
 .spot__pawpads {
@@ -2016,7 +2020,8 @@ contact
 
 .contact__button {
   margin-top: 24px;
-  text-align: center;
+  display: grid;
+  place-content: center;
 
   @include mq(lg) {
     margin-top: 40px;

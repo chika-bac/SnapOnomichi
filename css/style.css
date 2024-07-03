@@ -244,6 +244,7 @@ component > button
           align-items: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  white-space: nowrap;
 }
 .button:hover {
   cursor: pointer;
@@ -1932,7 +1933,8 @@ Step how to enter
 
 .step__button {
   margin-top: 16px;
-  text-align: center;
+  display: grid;
+  place-content: center;
 }
 @media screen and (min-width: 900px) {
   .step__button {
@@ -2412,8 +2414,9 @@ prize
 }
 
 .prize__button {
-  text-align: center;
   margin-top: 18px;
+  display: grid;
+  place-content: center;
 }
 @media screen and (min-width: 900px) {
   .prize__button {
@@ -2832,6 +2835,8 @@ spot swiper
 
 .spot__button {
   margin-top: 24px;
+  display: grid;
+  place-content: center;
 }
 
 .spot__pawpads {
@@ -3253,7 +3258,8 @@ contact
 
 .contact__button {
   margin-top: 24px;
-  text-align: center;
+  display: grid;
+  place-content: center;
 }
 @media screen and (min-width: 900px) {
   .contact__button {
