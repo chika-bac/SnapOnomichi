@@ -2272,6 +2272,19 @@ prize
 .prize__item-inner {
   border-radius: 8px;
   overflow: hidden;
+  border: 2px solid transparent;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.prize__item-inner:hover {
+  border-color: var(--color-main);
+}
+.prize__item-inner:hover .prize__item-img img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.prize__item-inner:hover .prize__item-zoom {
+  fill: var(--color-main);
 }
 @media screen and (min-width: 900px) {
   .prize__item-inner {
@@ -2317,6 +2330,10 @@ prize
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 160/140;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 @media screen and (min-width: 900px) {
   .prize__item:nth-child(1) .prize__item-img img, .prize__item:nth-child(2) .prize__item-img img {
@@ -2365,6 +2382,9 @@ prize
   right: 0;
   width: 36px;
   height: 36px;
+  fill: var(--color-sub-dblue);
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
 }
 @media screen and (min-width: 900px) {
   .prize__item:nth-child(1) .prize__item-zoom, .prize__item:nth-child(2) .prize__item-zoom {
