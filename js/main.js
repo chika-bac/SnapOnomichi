@@ -24,6 +24,7 @@ if (menuIcon) {
     e.preventDefault();
     menuIcon.classList.toggle("is-checked");
     menuPanel.classList.toggle("is-checked");
+    document.body.classList.toggle("isScrollAllowed");
   });
 }
 
@@ -35,6 +36,7 @@ document.querySelectorAll('#js-drawer-panel a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
     menuIcon.classList.remove("is-checked");
     menuPanel.classList.remove("is-checked");
+    document.body.classList.remove("isScrollAllowed");
   });
 });
 

@@ -32,4 +32,9 @@ body {
   @include mq(md) {
     font-size: var(--font-size-pc);
   }
+
+  // メニューopen時にスクロール禁止
+  &.isScrollAllowed {
+    overflow: hidden;
+  }
 }
