@@ -1348,12 +1348,12 @@ spot
 .spot__wave-bottom {
   width: 100%;
   height: 45.7px;
-  background-image: url(../../images/spots-wave-sp.png);
+  background-image: url(../images/spots-wave-sp.png);
   background-repeat: repeat-x;
   position: absolute;
 
   @include mq(lg) {
-    background-image: url(../../images/spots-wave-pc.png);
+    background-image: url(../images/spots-wave-pc.png);
     height: 120px;
   }
 }
@@ -1514,7 +1514,7 @@ spot swiper
   border-radius: 50%;
 
   &:after {
-    content: url(../../images/spot-icon-arrow.svg);
+    content: url(../images/spot-icon-arrow.svg);
     width: 57px;
     height: 57px;
     position: absolute;
