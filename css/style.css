@@ -216,6 +216,9 @@ body {
     font-size: var(--font-size-pc);
   }
 }
+body.isScrollAllowed {
+  overflow: hidden;
+}
 
 /*!
 component > button
@@ -400,9 +403,6 @@ select {
 @media screen and (min-width: 900px) {
   .form-field__head {
     min-width: 180px;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
   }
 }
 
@@ -2562,7 +2562,7 @@ spot
 }
 @media screen and (min-width: 900px) {
   .spot__wave-bottom {
-    bottom: -101px;
+    bottom: -116px;
   }
 }
 
@@ -2653,7 +2653,8 @@ spot swiper
 */
 .spot__item {
   max-width: 240px;
-  height: 402.2px;
+  padding-bottom: 31px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2669,9 +2670,9 @@ spot swiper
 @media screen and (min-width: 900px) {
   .spot__item {
     max-width: 344px;
-    height: 542px;
     gap: 24px;
     border-radius: 24px;
+    padding-bottom: 40px;
   }
 }
 
@@ -3283,6 +3284,7 @@ contact
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
   width: min(20%, 100px);
+  z-index: 99;
 }
 @media screen and (min-width: 900px) {
   .page-top {

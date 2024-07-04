@@ -1370,7 +1370,7 @@ spot
   transform: rotate(180deg);
 
   @include mq(lg) {
-    bottom: -101px;
+    bottom: -116px;
   }
 }
 
@@ -1437,7 +1437,9 @@ spot swiper
 */
 .spot__item {
   max-width: 240px;
-  height: calc(371px + 31.2px);
+  padding-bottom: 31px;
+  height: auto;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1447,9 +1449,9 @@ spot swiper
 
   @include mq(lg) {
     max-width: 344px;
-    height: calc(502px + 40px);
     gap: 24px;
     border-radius: 24px;
+    padding-bottom: 40px;
   }
 }
 
@@ -2042,6 +2044,7 @@ contact
   right: 50%;
   transform: translateX(50%);
   width: min(calc(75px / 375px * 100%), 100px);
+  z-index: 99;
 
   @include mq(lg) {
     position: fixed;
